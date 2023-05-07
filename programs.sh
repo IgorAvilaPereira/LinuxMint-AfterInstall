@@ -155,7 +155,7 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 sudo apt update && sudo apt install spotify-client -y
 
 # PostgreSQL
-# sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt ${UBUNTU_NAME}-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+# sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(UBUNTU_NAME)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt jammy-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo apt update && sudo apt install postgresql -y 
@@ -163,7 +163,7 @@ sudo apt update && sudo apt install postgresql -y
 # pgAdmin4
 sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
 sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
-# sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/${UBUNTU_NAME} pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+# sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(UBUNTU_NAME) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 sudo apt update && sudo apt install pgadmin4-desktop -y 
 
 # Flatpaks
