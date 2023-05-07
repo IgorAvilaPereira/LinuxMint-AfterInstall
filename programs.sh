@@ -115,14 +115,14 @@ sudo apt install pgadmin4-desktop
 # Flatpaks
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub com.obsproject.Studio
-sudo flatpak install flathub com.github.vkohaupt.vokoscreenNG
-sudo flatpak install flathub com.github.unrud.VideoDownloader
-sudo flatpak install flathub com.uploadedlobster.peek
-sudo flatpak install flathub com.visualstudio.code
-sudo flatpak install flathub io.github.lunarequest.NightPDF
-sudo flatpak install flathub com.discordapp.Discord
-sudo flatpak install flathub com.spotify.Client
+sudo flatpak install -y --noninteractive flathub com.obsproject.Studio
+sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenNG
+sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
+sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
+sudo flatpak install -y --noninteractive flathub com.visualstudio.code
+sudo flatpak install -y --noninteractive flathub io.github.lunarequest.NightPDF
+sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
+sudo flatpak install -y --noninteractive flathub com.spotify.Client
 
 sudo apt update && sudo apt dist-upgrade -y
 flatpak update
