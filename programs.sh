@@ -143,4 +143,3 @@ sudo apt update && sudo apt dist-upgrade -y
 flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
-
