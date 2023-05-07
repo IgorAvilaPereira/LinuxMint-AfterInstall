@@ -43,8 +43,8 @@ wget -c "$URL_EMBY_SERVER"                  -P "$DIRETORIO_DOWNLOADS"
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
-sudo apt-get install ffmpeg -y
-sudo apt-get install gstreamer1.0-plugins-ugly
+sudo apt install ffmpeg -y
+sudo apt install gstreamer1.0-plugins-ugly -y
 sudo apt install openjdk-19-jdk -y
 sudo apt install openjdk-19-jre -y
 sudo apt install python3.11-full -y
