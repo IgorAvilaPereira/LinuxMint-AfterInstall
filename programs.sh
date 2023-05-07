@@ -36,6 +36,8 @@ sudo apt autoremove -y
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
+sudo apt-get install ffmpeg -y
+sudo apt-get install gstreamer1.0-plugins-ugly
 sudo apt install openjdk-19-jdk -y
 sudo apt install openjdk-19-jre -y
 sudo apt install python3.11-full -y
@@ -74,11 +76,10 @@ sudo apt install psensor  -y
 sudo apt install synapse  -y
 sudo apt install vlc -y
 sudo apt install simple-scan -y
-sudo apt-get install ffmpeg -y
 sudo apt install kdenlive -y
 sudo add-apt-repository ppa:mordec13/youtubedl-gui
 sudo apt update && sudo apt install youtubedl-gui
-sudo apt-get install gstreamer1.0-plugins-ugly
+
 
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
