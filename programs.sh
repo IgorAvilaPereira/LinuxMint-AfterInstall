@@ -11,20 +11,21 @@ mkdir "$DIRETORIO_DOWNLOADS"
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-jammy_amd64.deb"
 URL_INSYNC_NEMO="https://cdn.insynchq.com/builds/linux/insync-nemo_3.7.9.50368_all.deb"
-URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+# arrumar
+# URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 URL_MEGA="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb"
 URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbuntu_22.04_amd64.deb"
 URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb"
-URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
+# URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
 
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC_NEMO"         -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_VSCODE"              -P "$DIRETORIO_DOWNLOADS"
+# wget -c "$URL_VSCODE"              -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_MEGA"                -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_DRAWIO"              -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_JDK"                 -P "$DIRETORIO_DOWNLOADS"
+# wget -c "$URL_JDK"                 -P "$DIRETORIO_DOWNLOADS"
 
 ## Instalando pacotes .deb baixados na sessão anterior ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
@@ -103,5 +104,4 @@ sudo apt update && sudo apt dist-upgrade -y
 flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
-
 
