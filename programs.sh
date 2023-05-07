@@ -36,6 +36,9 @@ wget -c "$URL_CODIUM"              -P "$DIRETORIO_DOWNLOADS"
 wget -cO $NAME_VSCODE "$URL_VSCODE" -P "$DIRETORIO_DOWNLOADS"
 wget -cO $NAME_DISCORD "$URL_DISCORD"            -P "$DIRETORIO_DOWNLOADS"
 
+# Bug
+# wget -c "$URL_JDK"              -P "$DIRETORIO_DOWNLOADS" 
+
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
 sudo apt-get install ffmpeg -y
@@ -43,7 +46,15 @@ sudo apt-get install gstreamer1.0-plugins-ugly
 sudo apt install openjdk-19-jdk -y
 sudo apt install openjdk-19-jre -y
 sudo apt install python3.11-full -y
+sudo apt install python3-pip -y
 sudo apt install php8.1 -y
+sudo apt install php8.1-gd -y
+sudo apt install php8.1-pgsql -y
+sudo apt install php8.1-mysql -y
+sudo apt install php8.1-xml -y
+sudo apt install php8.1-xmlrpc -y
+sudo apt install php8.1-zip -y
+sudo apt install php8.1-sqlite3 -y
 sudo apt install ruby-full -y
 sudo apt install sqlite3 -y
 sudo apt install apache-netbeans  -y
@@ -84,7 +95,6 @@ sudo apt install kdenlive -y
 sudo apt install openssh-client
 sudo apt install openssh-server
 sudo apt install texlive-latex-extra -y
-
 sudo apt --fix-broken install -y
 
 sudo add-apt-repository --yes ppa:sunderme/texstudio
@@ -94,7 +104,6 @@ sudo add-apt-repository --yes ppa:mordec13/youtubedl-gui
 sudo apt update && sudo apt install youtubedl-gui
 
 sudo add-apt-repository --yes ppa:obsproject/obs-studio
-sudo apt update
 sudo apt-get update && sudo apt-get install obs-studio
 
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
