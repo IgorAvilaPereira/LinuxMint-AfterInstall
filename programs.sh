@@ -15,28 +15,26 @@ URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_curre
 URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-jammy_amd64.deb"
 URL_INSYNC_NEMO="https://cdn.insynchq.com/builds/linux/insync-nemo_3.7.9.50368_all.deb"
 URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+NAME_VSCODE="${DIRETORIO_DOWNLOADS}/vscode.deb"
 URL_MEGA="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb"
 URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbuntu_22.04_amd64.deb"
 URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb"
 URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
+NAME_DISCORD="${DIRETORIO_DOWNLOADS}/discord.deb"
 URL_NETBEANS="https://www.apache.org/dyn/closer.cgi/netbeans/netbeans-installers/17/apache-netbeans_17-1_all.deb"
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
 
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC_NEMO"         -P "$DIRETORIO_DOWNLOADS"
-
 wget -c "$URL_MEGA"                -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_DRAWIO"              -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_NETBEANS"            -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CODIUM"              -P "$DIRETORIO_DOWNLOADS" 
-
-# Problems
-#wget -c "$URL_VSCODE"             -P "$DIRETORIO_DOWNLOADS"
-#wget -c "$URL_DISCORD"            -P "$DIRETORIO_DOWNLOADS"
-#wget -c "$URL_JDK"                -P "$DIRETORIO_DOWNLOADS"
+wget -cO $NAME_VSCODE "$URL_VSCODE" -P "$DIRETORIO_DOWNLOADS"
+wget -cO $NAME_DISCORD "$URL_DISCORD"            -P "$DIRETORIO_DOWNLOADS"
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
@@ -107,10 +105,10 @@ sudo apt autoremove -y
 sudo apt list --upgradable
 
 # vscode
-sudo apt install software-properties-common apt-transport-https wget -y
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add –
-sudo add-apt-repository --yes "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt install code
+#sudo apt install software-properties-common apt-transport-https wget -y
+#wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add –
+#sudo add-apt-repository --yes "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+#sudo apt install code
 
 # Spotify
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
@@ -145,4 +143,3 @@ sudo apt update && sudo apt dist-upgrade -y
 flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
-
