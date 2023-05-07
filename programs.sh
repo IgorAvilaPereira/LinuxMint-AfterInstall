@@ -147,8 +147,8 @@ sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloade
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 #sudo flatpak install -y --noninteractive flathub com.visualstudio.code
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
-sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
-sudo flatpak install -y --noninteractive flathub com.spotify.Client
+#sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
+#sudo flatpak install -y --noninteractive flathub com.spotify.Client
 #sudo flatpak install -y --noninteractive flathub org.apache.netbeans
 
 sudo apt update && sudo apt dist-upgrade -y
