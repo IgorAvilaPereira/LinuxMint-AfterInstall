@@ -104,6 +104,7 @@ sudo apt install simple-scan -y
 sudo apt install openssh-client -y
 sudo apt install openssh-server -y
 sudo apt install texlive-latex-extra -y
+# dependencies of programs .deb
 sudo apt install libgconf-2-4 -y
 sudo apt install libc++1 -y
 sudo apt install libu2f-udev -y
