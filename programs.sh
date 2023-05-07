@@ -150,8 +150,8 @@ sudo apt autoremove -y
 sudo dpkg -i $DOWNLOAD_FOLDER/*.deb
 sudo apt install -f -y
 sudo apt --fix-broken install -y
-# because insync
-nemo -q
+# because insync (optional)
+# nemo -q
 
 sudo apt update 
 sudo apt list --upgradable
