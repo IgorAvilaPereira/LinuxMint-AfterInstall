@@ -37,6 +37,7 @@ sudo apt --fix-broken install -y
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
+sudo apt list --upgradable
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
@@ -100,6 +101,7 @@ sudo apt-get update && sudo apt-get install obs-studio
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
+sudo apt list --upgradable
 
 # vscode
 sudo apt install software-properties-common apt-transport-https wget
