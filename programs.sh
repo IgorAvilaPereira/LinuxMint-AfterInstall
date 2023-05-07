@@ -9,6 +9,9 @@ sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
 
+# until not working
+# NAME=cat /etc/upstream-release/lsb-release | grep 'DISTRIB_CODENAME' |  cut -d '=' -f 2
+
 DOWNLOAD_FOLDER="$HOME/Downloads/softwares"
 EXTENSIONS_FOLDER="$HOME/.local/share/cinnamon/extensions/"
 mkdir "$DOWNLOAD_FOLDER"
@@ -65,7 +68,7 @@ wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER"
 #wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER"
 wget -cO $NAME_GTILE_EXTENSION "$URL_GTILE_EXTENSION"     -P "$DOWNLOAD_FOLDER"
 
-
+# extract gTile in extensions cinamoon folder
 sudo apt install unzip -y
 unzip $NAME_GTILE_EXTENSION -d $EXTENSIONS_FOLDER
 
