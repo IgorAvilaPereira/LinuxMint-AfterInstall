@@ -59,6 +59,7 @@ wget -cO $NAME_GTILE_EXTENSION "$URL_GTILE_EXTENSION"     -P "$DOWNLOAD_FOLDER"
 sudo apt install unzip -y
 unzip $NAME_GTILE_EXTENSION -d $EXTENSIONS_FOLDER
 
+# apt's programs (installed from ubuntu/mint repositories)
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
 sudo apt install ffmpeg -y
