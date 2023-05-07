@@ -6,7 +6,7 @@ sudo rm /var/cache/apt/archives/lock
 sudo apt update 
 sudo apt list --upgradable
 sudo apt dist-upgrade -y
-sudo apt autoclean
+sudo apt autoclean 
 sudo apt autoremove -y
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
