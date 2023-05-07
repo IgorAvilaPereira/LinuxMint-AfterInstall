@@ -21,6 +21,7 @@ URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/d
 URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 URL_NETBEANS="https://www.apache.org/dyn/closer.cgi/netbeans/netbeans-installers/17/apache-netbeans_17-1_all.deb"
+URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
 
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
@@ -30,6 +31,7 @@ wget -c "$URL_MEGA"                -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_DRAWIO"              -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_NETBEANS"            -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_CODIUM"              -P "$DIRETORIO_DOWNLOADS" 
 
 # Problems
 #wget -c "$URL_VSCODE"             -P "$DIRETORIO_DOWNLOADS"
@@ -143,3 +145,4 @@ sudo apt update && sudo apt dist-upgrade -y
 flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
+
