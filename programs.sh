@@ -20,6 +20,7 @@ URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbu
 URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb"
 URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
+URL_NETBEANS="https://www.apache.org/dyn/closer.cgi/netbeans/netbeans-installers/17/apache-netbeans_17-1_all.deb"
 
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
@@ -28,23 +29,12 @@ wget -c "$URL_INSYNC_NEMO"         -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_MEGA"                -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_DRAWIO"              -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_NETBEANS"            -P "$DIRETORIO_DOWNLOADS"
 
+# Problems
 #wget -c "$URL_VSCODE"             -P "$DIRETORIO_DOWNLOADS"
-#wget -cO $URL_VSCODE > $DIRETORIO_DOWNLOADS"/vscode.deb"
-
 #wget -c "$URL_DISCORD"            -P "$DIRETORIO_DOWNLOADS"
-#wget -cO $URL_DISCORD > $DIRETORIO_DOWNLOADS"/discord.deb"
-
 #wget -c "$URL_JDK"                -P "$DIRETORIO_DOWNLOADS"
-
-## Instalando pacotes .deb baixados na sessão anterior ##
-sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
-sudo apt --fix-broken install -y
-
-sudo apt update && sudo apt dist-upgrade -y
-sudo apt autoclean
-sudo apt autoremove -y
-sudo apt list --upgradable
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
@@ -106,6 +96,9 @@ sudo add-apt-repository --yes ppa:obsproject/obs-studio
 sudo apt update
 sudo apt-get update && sudo apt-get install obs-studio
 
+sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
+sudo apt --fix-broken install -y
+
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
@@ -136,15 +129,15 @@ sudo apt install pgadmin4-desktop
 # Flatpaks
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install -y --noninteractive flathub com.obsproject.Studio
+#sudo flatpak install -y --noninteractive flathub com.obsproject.Studio
 sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenNG
 sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
-sudo flatpak install -y --noninteractive flathub com.visualstudio.code
-sudo flatpak install -y --noninteractive flathub io.github.lunarequest.NightPDF
+#sudo flatpak install -y --noninteractive flathub com.visualstudio.code
+#sudo flatpak install -y --noninteractive flathub io.github.lunarequest.NightPDF
 sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
 sudo flatpak install -y --noninteractive flathub com.spotify.Client
-sudo flatpak install -y --noninteractive flathub org.apache.netbeans
+#sudo flatpak install -y --noninteractive flathub org.apache.netbeans
 
 sudo apt update && sudo apt dist-upgrade -y
 flatpak update
