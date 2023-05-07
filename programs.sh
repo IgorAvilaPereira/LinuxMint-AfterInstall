@@ -18,16 +18,17 @@ URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/d
 URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
 
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
-#wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
-#wget -c "$URL_INSYNC_NEMO"         -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_INSYNC_NEMO"         -P "$DIRETORIO_DOWNLOADS"
 #wget -c "$URL_VSCODE"              -P "$DIRETORIO_DOWNLOADS"
-#wget -c "$URL_MEGA"                -P "$DIRETORIO_DOWNLOADS"
-#wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_MEGA"                -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_DRAWIO"              -P "$DIRETORIO_DOWNLOADS"
 #wget -c "$URL_JDK"                 -P "$DIRETORIO_DOWNLOADS"
 
 ## Instalando pacotes .deb baixados na sessão anterior ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
+sudo apt --fix-broken install
 
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean
@@ -73,10 +74,15 @@ sudo apt install psensor  -y
 sudo apt install synapse  -y
 sudo apt install vlc -y
 sudo apt install simple-scan -y
+sudo apt-get install ffmpeg -y
 sudo apt install kdenlive -y
 sudo add-apt-repository ppa:mordec13/youtubedl-gui
 sudo apt update && sudo apt install youtubedl-gui
 sudo apt-get install gstreamer1.0-plugins-ugly
+
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt-get update && sudo apt-get install obs-studio
 
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean
@@ -108,6 +114,7 @@ sudo apt install pgadmin4-desktop
 # Flatpaks
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak install flathub com.obsproject.Studio
 sudo flatpak install flathub com.github.vkohaupt.vokoscreenNG
 sudo flatpak install flathub com.github.unrud.VideoDownloader
 sudo flatpak install flathub com.uploadedlobster.peek
