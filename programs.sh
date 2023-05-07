@@ -35,9 +35,7 @@ wget -c "$URL_NETBEANS"            -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CODIUM"              -P "$DIRETORIO_DOWNLOADS" 
 wget -cO $NAME_VSCODE "$URL_VSCODE" -P "$DIRETORIO_DOWNLOADS"
 wget -cO $NAME_DISCORD "$URL_DISCORD"            -P "$DIRETORIO_DOWNLOADS"
-
-# Bug
-# wget -c "$URL_JDK"              -P "$DIRETORIO_DOWNLOADS" 
+wget -c "$URL_JDK"              -P "$DIRETORIO_DOWNLOADS" 
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
