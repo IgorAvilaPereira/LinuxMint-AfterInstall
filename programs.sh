@@ -27,6 +27,7 @@ URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/
 URL_PDF_STUDIO_VIEWER="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
 URL_EMBY_SERVER="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.7.11.0/emby-server-deb_4.7.11.0_amd64.deb"
 URL_DBEAVER="https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
+URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download/v1.5.0/simple-signer.deb"
 
 wget -c "$URL_GOOGLE_CHROME"                -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC"                       -P "$DIRETORIO_DOWNLOADS"
@@ -42,6 +43,7 @@ wget -c "$URL_JDK"                          -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_PDF_STUDIO_VIEWER"            -P "$DIRETORIO_DOWNLOADS" 
 wget -c "$URL_EMBY_SERVER"                  -P "$DIRETORIO_DOWNLOADS" 
 wget -c "$URL_DBEAVER"                      -P "$DIRETORIO_DOWNLOADS" 
+wget -c "$URL_SIMPLE_SIGNER"                -P "$DIRETORIO_DOWNLOADS" 
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
@@ -94,6 +96,7 @@ sudo apt install qpdfview -y
 sudo apt install psensor  -y
 sudo apt install synapse  -y
 sudo apt install vlc -y
+sudo apt install neofetch -y
 sudo apt install simple-scan -y
 sudo apt install openssh-client -y
 sudo apt install openssh-server -y
