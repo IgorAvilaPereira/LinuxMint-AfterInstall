@@ -37,7 +37,7 @@ wget -c "$URL_INSYNC_ICONS"                 -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_INSYNC_NEMO"                  -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_MEGA"                         -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_MEGA_NEMO"                    -P "$DOWNLOAD_FOLDER"
-wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
+#wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_NETBEANS"                     -P "$DOWNLOAD_FOLDER"
 #wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER" 
 wget -cO $NAME_VSCODE "$URL_VSCODE"         -P "$DOWNLOAD_FOLDER"
@@ -46,7 +46,7 @@ wget -c "$URL_JDK"                          -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_PDF_STUDIO_VIEWER"            -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_EMBY_SERVER"                  -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER" 
-wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER" 
+#wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER" 
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
