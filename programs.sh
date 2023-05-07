@@ -83,8 +83,12 @@ sudo apt install simple-scan -y
 sudo apt install kdenlive -y
 sudo apt install openssh-client
 sudo apt install openssh-server
+sudo apt install texlive-latex-extra -y
 
 sudo apt --fix-broken install -y
+
+sudo add-apt-repository ppa:sunderme/texstudio
+sudo apt update && sudo apt install texstudio
 
 sudo add-apt-repository ppa:mordec13/youtubedl-gui
 sudo apt update && sudo apt install youtubedl-gui
@@ -136,3 +140,4 @@ sudo apt update && sudo apt dist-upgrade -y
 flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
+
