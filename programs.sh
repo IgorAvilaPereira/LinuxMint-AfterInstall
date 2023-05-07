@@ -4,25 +4,25 @@ sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 
 sudo apt update 
-sudo apt list --upgradable
+sudo apt list --upgradable 
 sudo apt dist-upgrade -y
-sudo apt autoclean 
+sudo apt autoclean
 sudo apt autoremove -y
 
-DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
-mkdir "$DIRETORIO_DOWNLOADS"
+DOWNLOAD_FOLDER="$HOME/Downloads/softwares"
+mkdir "$DOWNLOAD_FOLDER"
 
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-jammy_amd64.deb"
 URL_INSYNC_NEMO="https://cdn.insynchq.com/builds/linux/insync-nemo_3.7.9.50368_all.deb"
 URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
-NAME_VSCODE="${DIRETORIO_DOWNLOADS}/vscode.deb"
+NAME_VSCODE="${DOWNLOAD_FOLDER}/vscode.deb"
 URL_MEGA="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb"
 URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbuntu_22.04_amd64.deb"
 URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb"
 URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
-NAME_DISCORD="${DIRETORIO_DOWNLOADS}/discord.deb"
+NAME_DISCORD="${DOWNLOAD_FOLDER}/discord.deb"
 URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/17/apache-netbeans_17-1_all.deb"
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
 URL_PDF_STUDIO_VIEWER="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
@@ -30,21 +30,21 @@ URL_EMBY_SERVER="https://github.com/MediaBrowser/Emby.Releases/releases/download
 URL_DBEAVER="https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
 URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download/v1.5.0/simple-signer.deb"
 
-wget -c "$URL_GOOGLE_CHROME"                -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_INSYNC"                       -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_INSYNC_NEMO"                  -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_MEGA"                         -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_MEGA_NEMO"                    -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_DRAWIO"                       -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_NETBEANS"                     -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_CODIUM"                       -P "$DIRETORIO_DOWNLOADS" 
-wget -cO $NAME_VSCODE "$URL_VSCODE"         -P "$DIRETORIO_DOWNLOADS"
-wget -cO $NAME_DISCORD "$URL_DISCORD"       -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_JDK"                          -P "$DIRETORIO_DOWNLOADS" 
-wget -c "$URL_PDF_STUDIO_VIEWER"            -P "$DIRETORIO_DOWNLOADS" 
-wget -c "$URL_EMBY_SERVER"                  -P "$DIRETORIO_DOWNLOADS" 
-wget -c "$URL_DBEAVER"                      -P "$DIRETORIO_DOWNLOADS" 
-wget -c "$URL_SIMPLE_SIGNER"                -P "$DIRETORIO_DOWNLOADS" 
+wget -c "$URL_GOOGLE_CHROME"                -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_INSYNC"                       -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_INSYNC_NEMO"                  -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_MEGA"                         -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_MEGA_NEMO"                    -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_NETBEANS"                     -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER" 
+wget -cO $NAME_VSCODE "$URL_VSCODE"         -P "$DOWNLOAD_FOLDER"
+wget -cO $NAME_DISCORD "$URL_DISCORD"       -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_JDK"                          -P "$DOWNLOAD_FOLDER" 
+wget -c "$URL_PDF_STUDIO_VIEWER"            -P "$DOWNLOAD_FOLDER" 
+wget -c "$URL_EMBY_SERVER"                  -P "$DOWNLOAD_FOLDER" 
+wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER" 
+wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER" 
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
@@ -113,13 +113,14 @@ sudo apt update && sudo apt install youtubedl-gui -y
 sudo add-apt-repository --yes ppa:obsproject/obs-studio
 sudo apt update && sudo apt install obs-studio -y
 
-sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
+sudo dpkg -i $DOWNLOAD_FOLDER/*.deb
 sudo apt --fix-broken install -y
 
-sudo apt update && sudo apt dist-upgrade -y
+sudo apt update 
+sudo apt list --upgradable 
+sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
-sudo apt list --upgradable
 
 # vscode
 #sudo apt install software-properties-common apt-transport-https wget -y
@@ -155,7 +156,8 @@ sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
 #sudo flatpak install -y --noninteractive flathub com.spotify.Client
 #sudo flatpak install -y --noninteractive flathub org.apache.netbeans
 
-sudo apt update && sudo apt dist-upgrade -y
+sudo apt update 
+sudo apt dist-upgrade -y
 flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
