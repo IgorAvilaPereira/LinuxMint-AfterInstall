@@ -16,7 +16,7 @@ mkdir "$DOWNLOAD_FOLDER"
 
 # url's deb's program
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-${UBUNTU_NAME}_amd64.deb"
+URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-jammy_amd64.deb"
 URL_INSYNC_NEMO="https://cdn.insynchq.com/builds/linux/insync-nemo_3.7.9.50368_all.deb"
 URL_INSYNC_ICONS="http://apt.insync.io/ubuntu/pool/contrib/i/insync-emblem-icons/insync-emblem-icons_3.4.2.40983_all.deb"
 URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
