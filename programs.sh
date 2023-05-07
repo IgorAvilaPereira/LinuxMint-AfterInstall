@@ -99,13 +99,14 @@ sudo apt install simple-scan -y
 sudo apt install openssh-client -y
 sudo apt install openssh-server -y
 sudo apt install texlive-latex-extra -y
-# dependencies of programs .deb
+# dependencies of deb's program
 sudo apt install libgconf-2-4 -y
 sudo apt install libc++1 -y
 sudo apt install libu2f-udev -y
 sudo apt install libc6 -y
 sudo apt --fix-broken install -y
 
+# ppa's
 sudo add-apt-repository --yes ppa:sunderme/texstudio
 sudo apt update && sudo apt install texstudio -y
 
@@ -125,6 +126,7 @@ sudo apt autoremove -y
 sudo dpkg -i $DOWNLOAD_FOLDER/*.deb
 sudo apt install -f -y
 sudo apt --fix-broken install -y
+# because insync
 nemo -q
 
 sudo apt update 
@@ -132,6 +134,8 @@ sudo apt list --upgradable
 sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
+
+# specials
 
 # Spotify 
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
@@ -151,12 +155,15 @@ sudo apt update && sudo apt install pgadmin4-desktop -y
 # Flatpaks
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# will be install a deb version
 #sudo flatpak install -y --noninteractive flathub com.obsproject.Studio
 sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenNG
 sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
+# will be install a deb version
 #sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
+# will be install a deb version
 #sudo flatpak install -y --noninteractive flathub com.spotify.Client
 
 sudo apt update 
