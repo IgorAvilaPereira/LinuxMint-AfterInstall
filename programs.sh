@@ -11,71 +11,76 @@ mkdir "$DIRETORIO_DOWNLOADS"
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-jammy_amd64.deb"
 URL_INSYNC_NEMO="https://cdn.insynchq.com/builds/linux/insync-nemo_3.7.9.50368_all.deb"
-# arrumar
-# URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 URL_MEGA="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb"
 URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbuntu_22.04_amd64.deb"
 URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb"
-# URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
+URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
 
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_INSYNC_NEMO"         -P "$DIRETORIO_DOWNLOADS"
-# wget -c "$URL_VSCODE"              -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_MEGA"                -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
+#wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
+#wget -c "$URL_INSYNC_NEMO"         -P "$DIRETORIO_DOWNLOADS"
+#wget -c "$URL_VSCODE"              -P "$DIRETORIO_DOWNLOADS"
+#wget -c "$URL_MEGA"                -P "$DIRETORIO_DOWNLOADS"
+#wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_DRAWIO"              -P "$DIRETORIO_DOWNLOADS"
-# wget -c "$URL_JDK"                 -P "$DIRETORIO_DOWNLOADS"
+#wget -c "$URL_JDK"                 -P "$DIRETORIO_DOWNLOADS"
 
 ## Instalando pacotes .deb baixados na sessão anterior ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 
-sudo apt install curl
-sudo apt install mint-meta-codecs 
-sudo apt install apache-netbeans 
-sudo apt install apache2
-sudo apt install audacious      
-sudo apt install audacity
-sudo apt install cheese
-sudo apt install cmatrix
-sudo apt install dia
-sudo apt install discord
-sudo apt install docker.io
-sudo apt install dropbox
-sudo apt install nemo-dropbox
-sudo apt install emby-server
-sudo apt install filezilla
-sudo apt install gdebi
-sudo apt install gimp
-sudo apt install git
-sudo apt install keepassxc
-sudo apt install kolourpaint
-sudo apt install winff
-sudo apt install virtualbox
-sudo apt install flameshot
-sudo apt install retex
-sudo apt install shotwell
-sudo apt install simplescreenrecorder
-sudo apt install obs-studio
-sudo apt install pdfarranger            
-sudo apt install pdfmod             
-sudo apt install pdfchain
-sudo apt install vokoscreen
-sudo apt install vokoscreen-ng 
-sudo apt install qpdfview
-sudo apt install psensor 
-sudo apt install synapse 
-sudo apt install python3.11-full
-sudo apt install php8.1
-sudo apt install ruby-full
-sudo apt install vlc
-sudo apt install simple-scan
-sudo apt install openjdk-19-jdk
-sudo apt install openjdk-19-jre
-sudo apt install kdenlive
+sudo apt update && sudo apt dist-upgrade -y
+sudo apt autoclean
+sudo apt autoremove -y
+
+sudo apt install curl -y
+sudo apt install mint-meta-codecs  -y
+sudo apt install openjdk-19-jdk -y
+sudo apt install openjdk-19-jre -y
+sudo apt install python3.11-full -y
+sudo apt install php8.1 -y
+sudo apt install ruby-full -y
+sudo apt install apache-netbeans  -y
+sudo apt install apache2 -y
+sudo apt install audacious     -y  
+sudo apt install audacity -y
+sudo apt install cheese -y
+sudo apt install cmatrix -y
+sudo apt install dia -y
+sudo apt install discord -y
+sudo apt install docker.io -y
+sudo apt install dropbox -y
+sudo apt install nemo-dropbox -y
+sudo apt install emby-server -y
+sudo apt install filezilla -y
+sudo apt install gdebi -y
+sudo apt install gimp -y
+sudo apt install git -y 
+sudo apt install keepassxc -y
+sudo apt install kolourpaint -y
+sudo apt install winff -y
+sudo apt install virtualbox -y
+sudo apt install flameshot -y
+sudo apt install retex -y 
+sudo apt install shotwell -y 
+sudo apt install simplescreenrecorder -y
+sudo apt install obs-studio -y
+sudo apt install pdfarranger -y            
+sudo apt install pdfmod     -y        
+sudo apt install pdfchain -y
+sudo apt install qpdfview -y
+sudo apt install psensor  -y
+sudo apt install synapse  -y
+sudo apt install vlc -y
+sudo apt install simple-scan -y
+sudo apt install kdenlive -y
 sudo add-apt-repository ppa:mordec13/youtubedl-gui
 sudo apt update && sudo apt install youtubedl-gui
 sudo apt-get install gstreamer1.0-plugins-ugly
+
+sudo apt update && sudo apt dist-upgrade -y
+sudo apt autoclean
+sudo apt autoremove -y
 
 # vscode
 sudo apt install software-properties-common apt-transport-https wget
