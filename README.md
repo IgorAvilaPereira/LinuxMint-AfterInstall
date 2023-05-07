@@ -7,7 +7,7 @@ Testado no Linux Mint 21.1
 ## Uso
 
 ```bash
-sudo chmod 777 programs.sh
+sudo chmod 777 run.sh
 ./programs.sh
 ```
 
