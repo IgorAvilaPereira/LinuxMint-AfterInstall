@@ -128,17 +128,17 @@ sudo apt autoremove -y
 #sudo add-apt-repository --yes "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 #sudo apt install code
 
-# Spotify
+# Spotify 
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt update && sudo apt install spotify-client -y
 
-# PostgreSQL.
+# PostgreSQL
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt jammy-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo apt update && sudo apt install postgresql -y 
 
-# PgAdmin4
+# pgAdmin4
 sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
 sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 sudo apt update && sudo apt install pgadmin4-desktop -y 
