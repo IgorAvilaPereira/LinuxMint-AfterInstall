@@ -89,20 +89,19 @@ sudo apt install psensor  -y
 sudo apt install synapse  -y
 sudo apt install vlc -y
 sudo apt install simple-scan -y
-sudo apt install kdenlive -y
 sudo apt install openssh-client
 sudo apt install openssh-server
 sudo apt install texlive-latex-extra -y
 sudo apt --fix-broken install -y
 
 sudo add-apt-repository --yes ppa:sunderme/texstudio
-sudo apt update && sudo apt install texstudio
+sudo apt update && sudo apt install texstudio -y
 
 sudo add-apt-repository --yes ppa:mordec13/youtubedl-gui
-sudo apt update && sudo apt install youtubedl-gui
+sudo apt update && sudo apt install youtubedl-gui -y
 
 sudo add-apt-repository --yes ppa:obsproject/obs-studio
-sudo apt-get update && sudo apt-get install obs-studio
+sudo apt update && sudo apt install obs-studio -y
 
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 sudo apt --fix-broken install -y
@@ -141,7 +140,7 @@ sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenN
 sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 #sudo flatpak install -y --noninteractive flathub com.visualstudio.code
-#sudo flatpak install -y --noninteractive flathub io.github.lunarequest.NightPDF
+sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
 sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
 sudo flatpak install -y --noninteractive flathub com.spotify.Client
 #sudo flatpak install -y --noninteractive flathub org.apache.netbeans
