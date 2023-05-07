@@ -57,7 +57,7 @@ sudo apt install php8.1-xml -y
 sudo apt install php8.1-xmlrpc -y
 sudo apt install php8.1-zip -y
 sudo apt install php8.1-sqlite3 -y
-sudo apt install ruby-full -y
+#sudo apt install ruby-full -y
 sudo apt install sqlite3 -y
 sudo apt install apache-netbeans  -y
 sudo apt install apache2 -y
@@ -81,7 +81,7 @@ sudo apt install winff -y
 sudo apt install virtualbox -y
 sudo apt install flameshot -y
 sudo apt install ksnip -y
-sudo apt install retex -y 
+sudo apt install retext -y
 sudo apt install shotwell -y 
 sudo apt install simplescreenrecorder -y
 #sudo apt install obs-studio -y
