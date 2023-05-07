@@ -8,6 +8,6 @@ Testado no Linux Mint 21.1
 
 ```bash
 sudo chmod 777 run.sh
-./programs.sh
+./run.sh
 ```
 
