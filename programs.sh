@@ -4,7 +4,7 @@ sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 
 sudo apt update 
-sudo apt list --upgradable -y
+sudo apt list --upgradable
 sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
@@ -120,7 +120,7 @@ sudo add-apt-repository --yes ppa:obsproject/obs-studio
 sudo apt update && sudo apt install obs-studio -y
 
 sudo apt update 
-sudo apt list --upgradable -y
+sudo apt list --upgradable
 sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
@@ -130,7 +130,7 @@ sudo apt --fix-broken install -y
 #nemo -q
 
 #sudo apt update 
-#sudo apt list --upgradable -y
+#sudo apt list --upgradable
 #sudo apt dist-upgrade -y
 #sudo apt autoclean
 #sudo apt autoremove -y
@@ -170,7 +170,7 @@ sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
 #sudo flatpak install -y --noninteractive flathub org.apache.netbeans
 
 sudo apt update 
-sudo apt list --upgradable -y
+sudo apt list --upgradable
 sudo apt dist-upgrade -y
 sudo flatpak update
 sudo apt autoclean
