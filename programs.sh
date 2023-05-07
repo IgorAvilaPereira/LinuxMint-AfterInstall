@@ -130,11 +130,11 @@ sudo dpkg -i $DOWNLOAD_FOLDER/*.deb
 sudo apt --fix-broken install -y
 #nemo -q
 
-#sudo apt update 
-#sudo apt list --upgradable
-#sudo apt dist-upgrade -y
-#sudo apt autoclean
-#sudo apt autoremove -y
+sudo apt update 
+sudo apt list --upgradable
+sudo apt dist-upgrade -y
+sudo apt autoclean
+sudo apt autoremove -y
 
 # vscode
 #sudo apt install software-properties-common apt-transport-https wget -y
