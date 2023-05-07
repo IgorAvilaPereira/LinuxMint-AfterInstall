@@ -93,8 +93,8 @@ sudo apt install psensor  -y
 sudo apt install synapse  -y
 sudo apt install vlc -y
 sudo apt install simple-scan -y
-sudo apt install openssh-client
-sudo apt install openssh-server
+sudo apt install openssh-client -y
+sudo apt install openssh-server -y
 sudo apt install texlive-latex-extra -y
 sudo apt --fix-broken install -y
 
