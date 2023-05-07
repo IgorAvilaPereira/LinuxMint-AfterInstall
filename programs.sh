@@ -125,6 +125,7 @@ sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
 
+# maybe to use sudo apt install -f $DOWNLOAD_FOLDER/*.deb ??
 sudo dpkg -i $DOWNLOAD_FOLDER/*.deb
 sudo apt --fix-broken install -y
 #nemo -q
