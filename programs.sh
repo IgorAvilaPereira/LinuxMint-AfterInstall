@@ -66,7 +66,7 @@ sudo apt install php8.1-zip -y
 sudo apt install php8.1-sqlite3 -y
 #sudo apt install ruby-full -y
 sudo apt install sqlite3 -y
-sudo apt install apache-netbeans  -y
+#sudo apt install apache-netbeans  -y
 sudo apt install apache2 -y
 sudo apt install audacious     -y  
 sudo apt install audacity -y
