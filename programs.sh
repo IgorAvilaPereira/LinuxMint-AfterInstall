@@ -128,8 +128,9 @@ sudo apt autoremove -y
 
 # maybe to use sudo apt install -f $DOWNLOAD_FOLDER/*.deb ??
 sudo dpkg -i $DOWNLOAD_FOLDER/*.deb
+sudo apt install -f -y
 sudo apt --fix-broken install -y
-#nemo -q
+nemo -q
 
 sudo apt update 
 sudo apt list --upgradable
