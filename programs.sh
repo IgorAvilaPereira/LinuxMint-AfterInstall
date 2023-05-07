@@ -66,18 +66,15 @@ sudo apt install php8.1-zip -y
 sudo apt install php8.1-sqlite3 -y
 #sudo apt install ruby-full -y
 sudo apt install sqlite3 -y
-#sudo apt install apache-netbeans  -y
 sudo apt install apache2 -y
 sudo apt install audacious     -y  
 sudo apt install audacity -y
 sudo apt install cheese -y
 sudo apt install cmatrix -y
 sudo apt install dia -y
-#sudo apt install discord -y
 sudo apt install docker.io -y
 sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
-#sudo apt install emby-server -y
 sudo apt install filezilla -y
 sudo apt install gdebi -y
 sudo apt install gimp -y
@@ -86,12 +83,10 @@ sudo apt install keepassxc -y
 sudo apt install kolourpaint -y
 sudo apt install winff -y
 sudo apt install virtualbox -y
-#sudo apt install flameshot -y
 sudo apt install ksnip -y
 sudo apt install retext -y
 sudo apt install shotwell -y 
 sudo apt install simplescreenrecorder -y
-#sudo apt install obs-studio -y
 sudo apt install pdfarranger -y            
 sudo apt install pdfmod     -y        
 sudo apt install pdfchain -y
@@ -138,12 +133,6 @@ sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
 
-# vscode
-#sudo apt install software-properties-common apt-transport-https wget -y
-#wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add –
-#sudo add-apt-repository --yes "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-#sudo apt install code
-
 # Spotify 
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -166,11 +155,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenNG
 sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
-#sudo flatpak install -y --noninteractive flathub com.visualstudio.code
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
 #sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
 #sudo flatpak install -y --noninteractive flathub com.spotify.Client
-#sudo flatpak install -y --noninteractive flathub org.apache.netbeans
 
 sudo apt update 
 sudo apt list --upgradable
