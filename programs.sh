@@ -157,7 +157,8 @@ sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
 #sudo flatpak install -y --noninteractive flathub org.apache.netbeans
 
 sudo apt update 
+sudo apt list --upgradable 
 sudo apt dist-upgrade -y
-flatpak update
+sudo flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
