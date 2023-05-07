@@ -3,7 +3,10 @@
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 
-sudo apt update -y
+sudo apt update && sudo apt dist-upgrade -y
+sudo apt autoclean
+sudo apt autoremove -y
+sudo apt list --upgradable
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 mkdir "$DIRETORIO_DOWNLOADS"
@@ -26,9 +29,10 @@ wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_DRAWIO"              -P "$DIRETORIO_DOWNLOADS"
 #wget -c "$URL_JDK"                 -P "$DIRETORIO_DOWNLOADS"
 
+
 ## Instalando pacotes .deb baixados na sessão anterior ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
-sudo apt --fix-broken install
+sudo apt --fix-broken install -y
 
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean
@@ -77,9 +81,13 @@ sudo apt install synapse  -y
 sudo apt install vlc -y
 sudo apt install simple-scan -y
 sudo apt install kdenlive -y
+sudo apt install openssh-client
+sudo apt install openssh-server
+
+sudo apt --fix-broken install -y
+
 sudo add-apt-repository ppa:mordec13/youtubedl-gui
 sudo apt update && sudo apt install youtubedl-gui
-
 
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
@@ -95,7 +103,6 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt install code
 
-
 # Spotify
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -104,8 +111,8 @@ sudo apt-get update && sudo apt-get install spotify-client
 # PostgreSQL.
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-sudo apt-get update
-sudo apt-get -y install postgresql
+sudo apt update
+sudo apt -y install postgresql
 
 # PgAdmin4
 sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
@@ -123,9 +130,9 @@ sudo flatpak install -y --noninteractive flathub com.visualstudio.code
 sudo flatpak install -y --noninteractive flathub io.github.lunarequest.NightPDF
 sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
 sudo flatpak install -y --noninteractive flathub com.spotify.Client
+sudo flatpak install -y --noninteractive flathub org.apache.netbeans
 
 sudo apt update && sudo apt dist-upgrade -y
 flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
-
