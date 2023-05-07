@@ -9,7 +9,7 @@ sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
 
-UBUNTU_NAME="$(cat /etc/upstream-release/lsb-release | grep 'DISTRIB_CODENAME' |  cut -d '=' -f 2)"
+# UBUNTU_NAME="$(cat /etc/upstream-release/lsb-release | grep 'DISTRIB_CODENAME' |  cut -d '=' -f 2)"
 EXTENSIONS_FOLDER="$HOME/.local/share/cinnamon/extensions/"
 DOWNLOAD_FOLDER="$HOME/Downloads/softwares"
 mkdir "$DOWNLOAD_FOLDER"
