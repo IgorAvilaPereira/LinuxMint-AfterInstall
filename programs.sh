@@ -66,7 +66,7 @@ sudo apt install audacity -y
 sudo apt install cheese -y
 sudo apt install cmatrix -y
 sudo apt install dia -y
-sudo apt install discord -y
+#sudo apt install discord -y
 sudo apt install docker.io -y
 sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
