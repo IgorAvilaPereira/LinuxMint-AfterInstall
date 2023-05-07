@@ -95,13 +95,13 @@ sudo apt install texlive-latex-extra -y
 
 sudo apt --fix-broken install -y
 
-sudo add-apt-repository ppa:sunderme/texstudio
+sudo add-apt-repository --yes ppa:sunderme/texstudio
 sudo apt update && sudo apt install texstudio
 
-sudo add-apt-repository ppa:mordec13/youtubedl-gui
+sudo add-apt-repository --yes ppa:mordec13/youtubedl-gui
 sudo apt update && sudo apt install youtubedl-gui
 
-sudo add-apt-repository ppa:obsproject/obs-studio
+sudo add-apt-repository --yes ppa:obsproject/obs-studio
 sudo apt update
 sudo apt-get update && sudo apt-get install obs-studio
 
@@ -113,7 +113,7 @@ sudo apt list --upgradable
 # vscode
 sudo apt install software-properties-common apt-transport-https wget
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add –
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo add-apt-repository --yes "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt install code
 
 # Spotify
