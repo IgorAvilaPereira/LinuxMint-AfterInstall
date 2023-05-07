@@ -22,7 +22,7 @@ URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/d
 URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 NAME_DISCORD="${DIRETORIO_DOWNLOADS}/discord.deb"
-URL_NETBEANS="https://www.apache.org/dyn/closer.cgi/netbeans/netbeans-installers/17/apache-netbeans_17-1_all.deb"
+URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/17/apache-netbeans_17-1_all.deb"
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
 URL_PDF_STUDIO_VIEWER="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
 URL_EMBY_SERVER="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.7.11.0/emby-server-deb_4.7.11.0_amd64.deb"
