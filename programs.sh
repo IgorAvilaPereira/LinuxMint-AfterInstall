@@ -26,6 +26,7 @@ URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/17/apache-ne
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
 URL_PDF_STUDIO_VIEWER="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
 URL_EMBY_SERVER="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.7.11.0/emby-server-deb_4.7.11.0_amd64.deb"
+URL_DBEAVER="https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
 
 wget -c "$URL_GOOGLE_CHROME"                -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC"                       -P "$DIRETORIO_DOWNLOADS"
@@ -40,6 +41,7 @@ wget -cO $NAME_DISCORD "$URL_DISCORD"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_JDK"                          -P "$DIRETORIO_DOWNLOADS" 
 wget -c "$URL_PDF_STUDIO_VIEWER"            -P "$DIRETORIO_DOWNLOADS" 
 wget -c "$URL_EMBY_SERVER"                  -P "$DIRETORIO_DOWNLOADS" 
+wget -c "$URL_DBEAVER"                      -P "$DIRETORIO_DOWNLOADS" 
 
 sudo apt install curl -y
 sudo apt install mint-meta-codecs  -y
