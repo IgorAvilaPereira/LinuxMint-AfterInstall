@@ -3,10 +3,11 @@
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 
-sudo apt update && sudo apt dist-upgrade -y
+sudo apt update 
+sudo apt list --upgradable
+sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
-sudo apt list --upgradable
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 mkdir "$DIRETORIO_DOWNLOADS"
