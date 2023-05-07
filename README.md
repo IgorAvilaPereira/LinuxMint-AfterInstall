@@ -2,6 +2,8 @@
 
 Shell Script de pós instalação do Linux Mint para utilização pessoal.
 
+Testado no Linux Mint 21.1
+
 ## Uso
 
 ```bash
