@@ -15,6 +15,7 @@ mkdir "$DOWNLOAD_FOLDER"
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-jammy_amd64.deb"
 URL_INSYNC_NEMO="https://cdn.insynchq.com/builds/linux/insync-nemo_3.7.9.50368_all.deb"
+URL_INSYNC_ICONS="http://apt.insync.io/ubuntu/pool/contrib/i/insync-emblem-icons/insync-emblem-icons_3.4.2.40983_all.deb"
 URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 NAME_VSCODE="${DOWNLOAD_FOLDER}/vscode.deb"
 URL_MEGA="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb"
@@ -32,12 +33,13 @@ URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download
 
 wget -c "$URL_GOOGLE_CHROME"                -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_INSYNC"                       -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_INSYNC_ICONS"                 -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_INSYNC_NEMO"                  -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_MEGA"                         -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_MEGA_NEMO"                    -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_NETBEANS"                     -P "$DOWNLOAD_FOLDER"
-wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER" 
+#wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER" 
 wget -cO $NAME_VSCODE "$URL_VSCODE"         -P "$DOWNLOAD_FOLDER"
 wget -cO $NAME_DISCORD "$URL_DISCORD"       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_JDK"                          -P "$DOWNLOAD_FOLDER" 
@@ -84,7 +86,7 @@ sudo apt install keepassxc -y
 sudo apt install kolourpaint -y
 sudo apt install winff -y
 sudo apt install virtualbox -y
-sudo apt install flameshot -y
+#sudo apt install flameshot -y
 sudo apt install ksnip -y
 sudo apt install retext -y
 sudo apt install shotwell -y 
@@ -102,6 +104,10 @@ sudo apt install simple-scan -y
 sudo apt install openssh-client -y
 sudo apt install openssh-server -y
 sudo apt install texlive-latex-extra -y
+sudo apt install libgconf-2-4 -y
+sudo apt install libc++1 -y
+sudo apt install libu2f-udev -y
+sudo apt install libc6 -y
 sudo apt --fix-broken install -y
 
 sudo add-apt-repository --yes ppa:sunderme/texstudio
