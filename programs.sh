@@ -45,6 +45,7 @@ sudo apt install openjdk-19-jre -y
 sudo apt install python3.11-full -y
 sudo apt install php8.1 -y
 sudo apt install ruby-full -y
+sudo apt install sqlite3 -y
 sudo apt install apache-netbeans  -y
 sudo apt install apache2 -y
 sudo apt install audacious     -y  
@@ -113,18 +114,17 @@ sudo apt list --upgradable
 # Spotify
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install spotify-client
+sudo apt update && sudo apt install spotify-client -y
 
 # PostgreSQL.
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt jammy-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-sudo apt update
-sudo apt -y install postgresql
+sudo apt update && sudo apt install postgresql -y 
 
 # PgAdmin4
 sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
 sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
-sudo apt install pgadmin4-desktop
+sudo apt update && sudo apt install pgadmin4-desktop -y 
 
 # Flatpaks
 sudo apt install flatpak
