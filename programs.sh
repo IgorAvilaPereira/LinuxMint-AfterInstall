@@ -19,16 +19,23 @@ URL_MEGA="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_
 URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbuntu_22.04_amd64.deb"
 URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb"
 URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
+URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_INSYNC_NEMO"         -P "$DIRETORIO_DOWNLOADS"
-#wget -c "$URL_VSCODE"              -P "$DIRETORIO_DOWNLOADS"
+
 wget -c "$URL_MEGA"                -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_MEGA_NEMO"           -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_DRAWIO"              -P "$DIRETORIO_DOWNLOADS"
-#wget -c "$URL_JDK"                 -P "$DIRETORIO_DOWNLOADS"
 
+#wget -c "$URL_VSCODE"             -P "$DIRETORIO_DOWNLOADS"
+#wget -cO $URL_VSCODE > $DIRETORIO_DOWNLOADS"/vscode.deb"
+
+#wget -c "$URL_DISCORD"            -P "$DIRETORIO_DOWNLOADS"
+#wget -cO $URL_DISCORD > $DIRETORIO_DOWNLOADS"/discord.deb"
+
+#wget -c "$URL_JDK"                -P "$DIRETORIO_DOWNLOADS"
 
 ## Instalando pacotes .deb baixados na sessão anterior ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
