@@ -119,6 +119,10 @@ sudo flatpak install flathub com.obsproject.Studio
 sudo flatpak install flathub com.github.vkohaupt.vokoscreenNG
 sudo flatpak install flathub com.github.unrud.VideoDownloader
 sudo flatpak install flathub com.uploadedlobster.peek
+sudo flatpak install flathub com.visualstudio.code
+sudo flatpak install flathub io.github.lunarequest.NightPDF
+sudo flatpak install flathub com.discordapp.Discord
+sudo flatpak install flathub com.spotify.Client
 
 sudo apt update && sudo apt dist-upgrade -y
 flatpak update
