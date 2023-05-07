@@ -82,7 +82,7 @@ sudo apt install ksnip -y
 sudo apt install retex -y 
 sudo apt install shotwell -y 
 sudo apt install simplescreenrecorder -y
-sudo apt install obs-studio -y
+#sudo apt install obs-studio -y
 sudo apt install pdfarranger -y            
 sudo apt install pdfmod     -y        
 sudo apt install pdfchain -y
