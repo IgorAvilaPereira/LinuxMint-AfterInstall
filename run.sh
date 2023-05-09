@@ -86,6 +86,12 @@ sudo apt install cheese -y
 sudo apt install cmatrix -y
 sudo apt install dia -y
 sudo apt install docker.io -y
+# sudo docker run --name some-mongo -p 27017:27017 -d mongo:latest
+# sudo docker run \
+# --publish=7474:7474 --publish=7687:7687 \
+# --volume=$HOME/neo4j/data:/data \
+# --env=NEO4J_AUTH=neo4j/password \
+# --name neo4j neo4j
 sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
 sudo apt install filezilla -y
