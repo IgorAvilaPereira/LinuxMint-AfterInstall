@@ -77,6 +77,7 @@ sudo apt install php8.1-xmlrpc -y
 sudo apt install php8.1-zip -y
 sudo apt install php8.1-sqlite3 -y
 #sudo apt install ruby-full -y
+sudo apt install redis-server -y
 sudo apt install sqlite3 -y
 sudo apt install apache2 -y
 sudo apt install audacious     -y  
