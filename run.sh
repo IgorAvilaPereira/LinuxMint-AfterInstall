@@ -69,6 +69,7 @@ sudo apt install openjdk-19-jdk -y
 sudo apt install openjdk-19-jre -y
 sudo apt install python3.11-full -y
 sudo apt install python3-pip -y
+# python pip packages
 sudo pip3 install flask
 sudo pip3 install psycopg
 sudo pip3 install sqlalchemy
