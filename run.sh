@@ -78,7 +78,6 @@ unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 
 # apt's programs (installed from ubuntu/mint repositories)
 sudo apt install curl -y
-sudo apt install plantuml -y
 sudo apt install mint-meta-codecs  -y
 sudo apt install ffmpeg -y
 sudo apt install gstreamer1.0-plugins-ugly -y
@@ -118,41 +117,46 @@ sudo apt install bwidget -y
 sudo apt install redis-server -y
 sudo apt install sqlite3 -y
 sudo apt install apache2 -y
-# postgresql dependencies
-sudo apt install libpq-dev -y
-sudo apt install audacious     -y  
-sudo apt install audacity -y
-sudo apt install cheese -y
-sudo apt install cmatrix -y
-sudo apt install dia -y
+
 sudo apt install docker.io -y
-sudo apt install dropbox -y
-sudo apt install nemo-dropbox -y
-sudo apt install filezilla -y
-# sudo apt install gdebi -y
-# sudo apt install gdebi-gtk -y
-# sudo apt install gimp -y
 sudo apt install git -y 
 #mkdir "$HOME/git"
-sudo apt install keepassxc -y
-sudo apt install kolourpaint -y
+
+# audio
+sudo apt install audacious     -y  
+sudo apt install audacity -y
+# video/webcam
+sudo apt install cheese -y
 sudo apt install winff -y
-sudo apt install virtualbox -y
+# diagrams/graphics
+sudo apt install dia -y
+sudo apt install plantuml -y
+sudo apt install kolourpaint -y
 sudo apt install ksnip -y
-sudo apt install retext -y
 sudo apt install shotwell -y 
 sudo apt install simplescreenrecorder -y
+sudo apt install vlc -y
+sudo apt install simple-scan -y
 # pdf 
 sudo apt install pdfarranger -y            
 sudo apt install pdfmod     -y        
 sudo apt install pdfchain -y
 # sudo apt install qpdfview -y
 # sudo apt install mupdf mupdf-tools -y
+# others
+sudo apt install dropbox -y
+sudo apt install nemo-dropbox -y
+sudo apt install keepassxc -y
+sudo apt install virtualbox -y
+sudo apt install retext -y
+sudo apt install cmatrix -y
+sudo apt install neofetch -y
+# sudo apt install gdebi -y
+# sudo apt install gdebi-gtk -y
+# sudo apt install gimp -y
 # sudo apt install psensor  -y
 # sudo apt install synapse  -y
-sudo apt install vlc -y
-sudo apt install neofetch -y
-sudo apt install simple-scan -y
+sudo apt install filezilla -y
 sudo apt install openssh-client -y
 sudo apt install openssh-server -y
 sudo apt install texlive-latex-extra -y
@@ -161,6 +165,9 @@ sudo apt install libgconf-2-4 -y
 sudo apt install libc++1 -y
 sudo apt install libu2f-udev -y
 sudo apt install libc6 -y
+sudo apt install libpq-dev -y
+
+sudo apt install -f -y
 sudo apt --fix-broken install -y
 
 # ppa's
@@ -231,12 +238,6 @@ sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
 # if you want to install mendeley
 # sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
-# will be install a deb version
-#sudo flatpak install -y --noninteractive flathub com.obsproject.Studio
-# will be install a deb version
-#sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
-# will be install a deb version
-#sudo flatpak install -y --noninteractive flathub com.spotify.Client
 
 sudo apt update 
 sudo apt list --upgradable
