@@ -127,6 +127,10 @@ sudo apt update && sudo apt install texstudio -y
 sudo add-apt-repository --yes ppa:obsproject/obs-studio
 sudo apt update && sudo apt install obs-studio -y
 
+# testing
+# sudo add-apt-repository --yes ppa:serge-rider/dbeaver-ce
+# sudo apt update && sudo apt install dbeaver-ce -y
+
 sudo apt update 
 sudo apt list --upgradable
 sudo apt dist-upgrade -y
