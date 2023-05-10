@@ -76,7 +76,7 @@ sudo apt install php8.1-xml -y
 sudo apt install php8.1-xmlrpc -y
 sudo apt install php8.1-zip -y
 sudo apt install php8.1-sqlite3 -y
-#sudo apt install ruby-full -y
+sudo apt install ruby-full -y
 #sudo apt install ubuntu-restricted-extras -y
 sudo apt install redis-server -y
 sudo apt install sqlite3 -y
@@ -132,6 +132,7 @@ sudo apt update && sudo apt install texstudio -y
 
 sudo add-apt-repository --yes ppa:mordec13/youtubedl-gui
 sudo apt update && sudo apt install youtubedl-gui -y
+sudo apt install build-essential cmake qtbase5-dev ffmpeg youtube-dl -y
 
 sudo add-apt-repository --yes ppa:obsproject/obs-studio
 sudo apt update && sudo apt install obs-studio -y
