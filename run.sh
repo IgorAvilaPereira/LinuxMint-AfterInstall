@@ -174,7 +174,6 @@ sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
 # if you want to install mendeley
 # sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
-
 # will be install a deb version
 #sudo flatpak install -y --noninteractive flathub com.obsproject.Studio
 # will be install a deb version
