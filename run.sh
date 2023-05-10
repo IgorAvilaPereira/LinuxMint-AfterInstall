@@ -216,7 +216,8 @@ sudo apt update && sudo apt install pgadmin4-desktop -y
 #sudo killall synaptic
 #sudo gem install pg
 #sudo gem install sinatra
-#  if you want data mapper for ruby
+
+# if you want data mapper for ruby
 # sudo apt-get install postgresql-server-dev-all  -y
 # sudo gem install dm-postgres-adapter
 # sudo gem install data_mapper
