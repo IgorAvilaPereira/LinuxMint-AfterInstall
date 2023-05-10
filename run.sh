@@ -104,9 +104,10 @@ sudo apt install simplescreenrecorder -y
 sudo apt install pdfarranger -y            
 sudo apt install pdfmod     -y        
 sudo apt install pdfchain -y
-sudo apt install qpdfview -y
-sudo apt install psensor  -y
-sudo apt install synapse  -y
+# sudo apt install qpdfview -y
+# sudo apt install mupdf mupdf-tools -y
+# sudo apt install psensor  -y
+# sudo apt install synapse  -y
 sudo apt install vlc -y
 sudo apt install neofetch -y
 sudo apt install simple-scan -y
