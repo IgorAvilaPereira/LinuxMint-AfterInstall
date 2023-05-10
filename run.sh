@@ -78,7 +78,6 @@ sudo apt install php8.1-xmlrpc -y
 sudo apt install php8.1-zip -y
 sudo apt install php8.1-sqlite3 -y
 #sudo apt install ruby-full -y
-#sudo apt install ubuntu-restricted-extras -y
 sudo apt install redis-server -y
 sudo apt install sqlite3 -y
 sudo apt install apache2 -y
@@ -173,6 +172,9 @@ sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenN
 sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
+# if you want to install mendeley
+# sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
+
 # will be install a deb version
 #sudo flatpak install -y --noninteractive flathub com.obsproject.Studio
 # will be install a deb version
