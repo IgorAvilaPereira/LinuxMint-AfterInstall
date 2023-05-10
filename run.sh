@@ -80,15 +80,20 @@ unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 
 # apt's programs (installed from ubuntu/mint repositories)
 sudo apt install curl -y
+
+# codecs
 sudo apt install mint-meta-codecs  -y
 sudo apt install ffmpeg -y
 sudo apt install gstreamer1.0-plugins-ugly -y
+
 #  java
 sudo apt install openjdk-19-jdk -y
 sudo apt install openjdk-19-jre -y
+
 # python
 sudo apt install python3.11-full -y
 sudo apt install python3-pip -y
+
 # pip packages
 sudo pip3 install flask
 sudo pip3 install psycopg
@@ -103,6 +108,7 @@ sudo pip3 install pyinstaller
 sudo pip3 install SpeechRecognition
 sudo pip3 install pdfannots
 sudo pip3 install pyautogui pillow mouseinfo
+
 # php
 sudo apt install php8.1 -y
 sudo apt install php8.1-gd -y
@@ -112,23 +118,27 @@ sudo apt install php8.1-xml -y
 sudo apt install php8.1-xmlrpc -y
 sudo apt install php8.1-zip -y
 sudo apt install php8.1-sqlite3 -y
+
 #  ruby
 sudo apt install ruby-full -y
 sudo apt install bwidget -y
+
 # databases
 sudo apt install redis-server -y
 sudo apt install sqlite3 -y
-# servers
+
+# others developer programs
 sudo apt install apache2 -y
 sudo apt install docker.io -y
 sudo apt install git -y 
 #mkdir "$HOME/git"
-# audio
+
+# audio/video
 sudo apt install audacious     -y  
 sudo apt install audacity -y
-# video/webcam
 sudo apt install cheese -y
 sudo apt install winff -y
+
 # diagrams/graphics
 sudo apt install dia -y
 sudo apt install plantuml -y
@@ -138,12 +148,14 @@ sudo apt install shotwell -y
 sudo apt install simplescreenrecorder -y
 sudo apt install vlc -y
 sudo apt install simple-scan -y
+
 # pdf 
 sudo apt install pdfarranger -y            
 sudo apt install pdfmod     -y        
 sudo apt install pdfchain -y
 # sudo apt install qpdfview -y
 # sudo apt install mupdf mupdf-tools -y
+
 # others
 sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
@@ -158,12 +170,15 @@ sudo apt install neofetch -y
 # sudo apt install psensor  -y
 # sudo apt install synapse  -y
 sudo apt install filezilla -y
+
 # ssh
 sudo apt install openssh-client -y
 sudo apt install openssh-server -y
+
 # latex
 sudo apt install texlive-latex-extra -y
 # sudo apt install jabref 
+
 # dependencies of deb's program
 sudo apt install libgconf-2-4 -y
 sudo apt install libc++1 -y
