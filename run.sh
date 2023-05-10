@@ -179,7 +179,7 @@ sudo apt install openssh-server -y
 sudo apt install texlive-latex-extra -y
 # sudo apt install jabref 
 
-# dependencies of deb's program
+# dependencies of deb's program/ppa'a
 sudo apt install libgconf-2-4 -y
 sudo apt install libc++1 -y
 sudo apt install libu2f-udev -y
@@ -198,6 +198,11 @@ sudo apt update && sudo apt install obs-studio -y
 
 sudo add-apt-repository --yes ppa:serge-rider/dbeaver-ce
 sudo apt update && sudo apt install dbeaver-ce -y
+
+# sudo apt install software-properties-common apt-transport-https wget -y
+# wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+# sudo add-apt-repository --yes "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+# sudo apt update && sudo apt install code -y
 
 sudo apt update 
 sudo apt list --upgradable
@@ -236,6 +241,10 @@ sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key
 # sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(UBUNTU_NAME) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 sudo apt update && sudo apt install pgadmin4-desktop -y 
+
+
+
+
 
 # gem dependencies
 #sudo apt install libpq-dev -y
