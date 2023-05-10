@@ -59,10 +59,12 @@ wget -c "$URL_PDF_STUDIO_VIEWER"            -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_EMBY_SERVER"                  -P "$DOWNLOAD_FOLDER" 
 #wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER" 
 #wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER"
+# manager window to cinamoon
 wget -cO $NAME_GTILE_EXTENSION "$URL_GTILE_EXTENSION"     -P "$DOWNLOAD_FOLDER"
+# launcher applications
 wget -cO $NAME_MYLAUNCHER_APPLET "$URL_MYLAUNCHER_APPLET"     -P "$DOWNLOAD_FOLDER"
 
-# extract gTile extension and my launch applet
+# extract gTile extension and My Launch applet
 sudo apt install unzip -y
 unzip $NAME_GTILE_EXTENSION -d $EXTENSIONS_FOLDER
 unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
