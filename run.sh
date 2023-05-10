@@ -158,9 +158,12 @@ sudo apt install neofetch -y
 # sudo apt install psensor  -y
 # sudo apt install synapse  -y
 sudo apt install filezilla -y
+# ssh
 sudo apt install openssh-client -y
 sudo apt install openssh-server -y
+# latex
 sudo apt install texlive-latex-extra -y
+# sudo apt install jabref 
 # dependencies of deb's program
 sudo apt install libgconf-2-4 -y
 sudo apt install libc++1 -y
