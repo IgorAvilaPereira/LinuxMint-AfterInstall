@@ -65,8 +65,10 @@ sudo apt install plantuml -y
 sudo apt install mint-meta-codecs  -y
 sudo apt install ffmpeg -y
 sudo apt install gstreamer1.0-plugins-ugly -y
+#  java
 sudo apt install openjdk-19-jdk -y
 sudo apt install openjdk-19-jre -y
+# python
 sudo apt install python3.11-full -y
 sudo apt install python3-pip -y
 # python pip packages
@@ -83,6 +85,7 @@ sudo pip3 install pyinstaller
 sudo pip3 install SpeechRecognition
 sudo pip3 install pdfannots
 sudo pip3 install pyautogui pillow mouseinfo
+# php
 sudo apt install php8.1 -y
 sudo apt install php8.1-gd -y
 sudo apt install php8.1-pgsql -y
@@ -91,11 +94,14 @@ sudo apt install php8.1-xml -y
 sudo apt install php8.1-xmlrpc -y
 sudo apt install php8.1-zip -y
 sudo apt install php8.1-sqlite3 -y
+#  ruby
 sudo apt install ruby-full -y
 sudo apt install bwidget -y
+# databases
 sudo apt install redis-server -y
 sudo apt install sqlite3 -y
 sudo apt install apache2 -y
+
 sudo apt install audacious     -y  
 sudo apt install audacity -y
 sudo apt install cheese -y
@@ -117,6 +123,7 @@ sudo apt install ksnip -y
 sudo apt install retext -y
 sudo apt install shotwell -y 
 sudo apt install simplescreenrecorder -y
+# pdf 
 sudo apt install pdfarranger -y            
 sudo apt install pdfmod     -y        
 sudo apt install pdfchain -y
