@@ -183,6 +183,11 @@ sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key
 sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 sudo apt update && sudo apt install pgadmin4-desktop -y 
 
+# gem dependencies
+sudo apt install libpq-dev -y
+sudo gem install pg
+sudo gem install sinatra
+
 # Flatpaks
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
