@@ -189,7 +189,7 @@ sudo apt install libpq-dev -y
 sudo gem install pg
 sudo gem install sinatra
 
-#  if you want data mapper ruby together
+#  if you want data mapper for ruby
 # sudo apt-get install postgresql-server-dev-all  -y
 # sudo gem install dm-postgres-adapter
 # sudo gem install data_mapper
