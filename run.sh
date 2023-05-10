@@ -137,7 +137,7 @@ sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
 
-# maybe to use sudo apt install -f $DOWNLOAD_FOLDER/*.deb ??
+# maybe to try sudo apt install ./$DOWNLOAD_FOLDER/*.deb -y ??
 sudo dpkg -i $DOWNLOAD_FOLDER/*.deb
 sudo apt install -f -y
 sudo apt --fix-broken install -y
