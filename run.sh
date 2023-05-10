@@ -105,6 +105,7 @@ sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
 sudo apt install filezilla -y
 # sudo apt install gdebi -y
+# sudo apt install gdebi-gtk -y
 # sudo apt install gimp -y
 sudo apt install git -y 
 sudo apt install keepassxc -y
