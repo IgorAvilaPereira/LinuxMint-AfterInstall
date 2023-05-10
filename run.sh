@@ -47,6 +47,8 @@ NAME_MYLAUNCHER_APPLET="${DOWNLOAD_FOLDER}/mylauncher@markbokil.com.zip"
 #wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
 #wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER" 
 #wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER"
+
+# wget -cO $NAME_VSCODE "$URL_VSCODE"         -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_GOOGLE_CHROME"                -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_INSYNC"                       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_INSYNC_ICONS"                 -P "$DOWNLOAD_FOLDER"
@@ -57,8 +59,8 @@ wget -c "$URL_NETBEANS"                     -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_JDK"                          -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_PDF_STUDIO_VIEWER"            -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_EMBY_SERVER"                  -P "$DOWNLOAD_FOLDER" 
-wget -cO $NAME_VSCODE "$URL_VSCODE"         -P "$DOWNLOAD_FOLDER"
 wget -cO $NAME_DISCORD "$URL_DISCORD"       -P "$DOWNLOAD_FOLDER"
+
 # manager window to cinamoon
 wget -cO $NAME_GTILE_EXTENSION "$URL_GTILE_EXTENSION"     -P "$DOWNLOAD_FOLDER"
 # launcher applications
@@ -199,10 +201,10 @@ sudo apt update && sudo apt install obs-studio -y
 sudo add-apt-repository --yes ppa:serge-rider/dbeaver-ce
 sudo apt update && sudo apt install dbeaver-ce -y
 
-# sudo apt install software-properties-common apt-transport-https wget -y
-# wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-# sudo add-apt-repository --yes "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-# sudo apt update && sudo apt install code -y
+sudo apt install software-properties-common apt-transport-https wget -y
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository --yes "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update && sudo apt install code -y
 
 sudo apt update 
 sudo apt list --upgradable
