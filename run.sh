@@ -89,7 +89,7 @@ sudo apt install openjdk-19-jre -y
 # python
 sudo apt install python3.11-full -y
 sudo apt install python3-pip -y
-# python pip packages
+# pip packages
 sudo pip3 install flask
 sudo pip3 install psycopg
 sudo pip3 install sqlalchemy
@@ -118,12 +118,11 @@ sudo apt install bwidget -y
 # databases
 sudo apt install redis-server -y
 sudo apt install sqlite3 -y
+# servers
 sudo apt install apache2 -y
-
 sudo apt install docker.io -y
 sudo apt install git -y 
 #mkdir "$HOME/git"
-
 # audio
 sudo apt install audacious     -y  
 sudo apt install audacity -y
