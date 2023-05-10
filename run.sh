@@ -168,12 +168,12 @@ sudo apt update && sudo apt install pgadmin4-desktop -y
 # Flatpaks
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-# will be install a deb version
-#sudo flatpak install -y --noninteractive flathub com.obsproject.Studio
 sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenNG
 sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
+# will be install a deb version
+#sudo flatpak install -y --noninteractive flathub com.obsproject.Studio
 # will be install a deb version
 #sudo flatpak install -y --noninteractive flathub com.discordapp.Discord
 # will be install a deb version
