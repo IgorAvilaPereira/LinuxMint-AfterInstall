@@ -10,7 +10,11 @@ sudo apt autoclean
 sudo apt autoremove -y
 
 # UBUNTU_NAME="$(cat /etc/upstream-release/lsb-release | grep 'DISTRIB_CODENAME' |  cut -d '=' -f 2)"
+
+# extensions and applets cinamoon
 EXTENSIONS_FOLDER="$HOME/.local/share/cinnamon/extensions/"
+APPLETS_FOLDER="$HOME/.local/share/cinnamon/applets/"
+
 DOWNLOAD_FOLDER="$HOME/Downloads/softwares"
 mkdir "$DOWNLOAD_FOLDER"
 
@@ -35,6 +39,8 @@ URL_DBEAVER="https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
 URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download/v1.5.0/simple-signer.deb"
 URL_GTILE_EXTENSION="https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip?time=1683484780"
 NAME_GTILE_EXTENSION="${DOWNLOAD_FOLDER}/gTile@shuairan.zip"
+URL_MYLAUNCHER_APPLET="https://cinnamon-spices.linuxmint.com/files/applets/mylauncher@markbokil.com.zip?time=1683739498"
+NAME_MYLAUNCHER_APPLET="${DOWNLOAD_FOLDER}/mylauncher@markbokil.com.zip"
 
 # download deb's program
 wget -c "$URL_GOOGLE_CHROME"                -P "$DOWNLOAD_FOLDER"
@@ -51,13 +57,15 @@ wget -cO $NAME_DISCORD "$URL_DISCORD"       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_JDK"                          -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_PDF_STUDIO_VIEWER"            -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_EMBY_SERVER"                  -P "$DOWNLOAD_FOLDER" 
-wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER" 
+#wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER" 
 #wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER"
 wget -cO $NAME_GTILE_EXTENSION "$URL_GTILE_EXTENSION"     -P "$DOWNLOAD_FOLDER"
+wget -cO $NAME_MYLAUNCHER_APPLET "$URL_MYLAUNCHER_APPLET"     -P "$DOWNLOAD_FOLDER"
 
-# extract gTile in extensions cinamoon folder
+# extract gTile extension and my launch applet
 sudo apt install unzip -y
 unzip $NAME_GTILE_EXTENSION -d $EXTENSIONS_FOLDER
+unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 
 # apt's programs (installed from ubuntu/mint repositories)
 sudo apt install curl -y
@@ -115,6 +123,7 @@ sudo apt install filezilla -y
 # sudo apt install gdebi-gtk -y
 # sudo apt install gimp -y
 sudo apt install git -y 
+#mkdir "$HOME/git"
 sudo apt install keepassxc -y
 sudo apt install kolourpaint -y
 sudo apt install winff -y
@@ -151,9 +160,8 @@ sudo apt update && sudo apt install texstudio -y
 sudo add-apt-repository --yes ppa:obsproject/obs-studio
 sudo apt update && sudo apt install obs-studio -y
 
-# testing
-# sudo add-apt-repository --yes ppa:serge-rider/dbeaver-ce
-# sudo apt update && sudo apt install dbeaver-ce -y
+sudo add-apt-repository --yes ppa:serge-rider/dbeaver-ce
+sudo apt update && sudo apt install dbeaver-ce -y
 
 sudo apt update 
 sudo apt list --upgradable
