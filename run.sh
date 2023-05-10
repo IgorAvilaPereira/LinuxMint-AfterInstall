@@ -130,10 +130,6 @@ sudo apt --fix-broken install -y
 sudo add-apt-repository --yes ppa:sunderme/texstudio
 sudo apt update && sudo apt install texstudio -y
 
-sudo add-apt-repository --yes ppa:mordec13/youtubedl-gui
-sudo apt update && sudo apt install youtubedl-gui -y
-sudo apt install build-essential cmake qtbase5-dev ffmpeg youtube-dl -y
-
 sudo add-apt-repository --yes ppa:obsproject/obs-studio
 sudo apt update && sudo apt install obs-studio -y
 
