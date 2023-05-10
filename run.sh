@@ -69,6 +69,19 @@ sudo apt install openjdk-19-jdk -y
 sudo apt install openjdk-19-jre -y
 sudo apt install python3.11-full -y
 sudo apt install python3-pip -y
+sudo pip3 install flask
+sudo pip3 install psycopg
+sudo pip3 install sqlalchemy
+sudo pip3 install flask-sqlalchemy
+sudo pip3 install flet
+sudo pip3 install gdown
+sudo pip3 install selenium
+sudo pip3 install pytube
+sudo pip3 install ezodf
+sudo pip3 install pyinstaller
+sudo pip3 install SpeechRecognition
+sudo pip3 install pdfannots
+sudo pip3 install pyautogui pillow mouseinfo
 sudo apt install php8.1 -y
 sudo apt install php8.1-gd -y
 sudo apt install php8.1-pgsql -y
