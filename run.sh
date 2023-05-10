@@ -91,6 +91,7 @@ sudo apt install php8.1-xmlrpc -y
 sudo apt install php8.1-zip -y
 sudo apt install php8.1-sqlite3 -y
 sudo apt install ruby-full -y
+sudo apt install bwidget -y
 sudo apt install redis-server -y
 sudo apt install sqlite3 -y
 sudo apt install apache2 -y
@@ -187,6 +188,11 @@ sudo apt update && sudo apt install pgadmin4-desktop -y
 sudo apt install libpq-dev -y
 sudo gem install pg
 sudo gem install sinatra
+
+#  if you want data mapper ruby together
+# sudo apt-get install postgresql-server-dev-all  -y
+# sudo gem install dm-postgres-adapter
+# sudo gem install data_mapper
 
 # Flatpaks
 sudo apt install flatpak
