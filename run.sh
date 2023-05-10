@@ -67,6 +67,15 @@ sudo apt install unzip -y
 unzip $NAME_GTILE_EXTENSION -d $EXTENSIONS_FOLDER
 unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 
+#echo '[MS] -----------------
+#GenerateEvaluationSheetToStudents=python3 /home/iapereira/git/GenerateEvaluationSheetToStudents/app.py 
+#PDF Annots=python3 /home/iapereira/git/pdfannots-tkinter-app/main.py
+#Youtube Downloader=python3 /home/iapereira/git/youtube-download/main.py
+#[MS] -----------------
+#Latex From Figures=java -jar /home/iapereira/git/LatexPresentationFromFigures/dist/LatexPresentationFromFigures.jar
+#[MS] -----------------
+#Distribuição da Carga Horária=firefox  /home/iapereira/git/DistribuicaoDeDisciplinas/carga_horaria.html' >> "${APPLETS_FOLDER}mylauncher@markbokil.com/mylauncher.properties"
+
 # apt's programs (installed from ubuntu/mint repositories)
 sudo apt install curl -y
 sudo apt install plantuml -y
@@ -109,7 +118,8 @@ sudo apt install bwidget -y
 sudo apt install redis-server -y
 sudo apt install sqlite3 -y
 sudo apt install apache2 -y
-
+# postgresql dependencies
+sudo apt install libpq-dev -y
 sudo apt install audacious     -y  
 sudo apt install audacity -y
 sudo apt install cheese -y
@@ -202,10 +212,10 @@ sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy 
 sudo apt update && sudo apt install pgadmin4-desktop -y 
 
 # gem dependencies
-sudo apt install libpq-dev -y
-sudo gem install pg
-sudo gem install sinatra
-
+#sudo apt install libpq-dev -y
+#sudo killall synaptic
+#sudo gem install pg
+#sudo gem install sinatra
 #  if you want data mapper for ruby
 # sudo apt-get install postgresql-server-dev-all  -y
 # sudo gem install dm-postgres-adapter
