@@ -162,7 +162,7 @@ sudo apt install pdfchain -y
 sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
 sudo apt install keepassxc -y
-sudo apt install virtualbox -y
+# sudo apt install virtualbox -y
 sudo apt install retext -y
 sudo apt install cmatrix -y
 sudo apt install neofetch -y
