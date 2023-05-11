@@ -81,6 +81,7 @@ unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 #Distribuição da Carga Horária=firefox  /home/iapereira/git/DistribuicaoDeDisciplinas/carga_horaria.html' >> "${APPLETS_FOLDER}mylauncher@markbokil.com/mylauncher.properties"
 
 # apt's programs (installed from ubuntu/mint repositories)
+# for poor pc's 
 # sudo apt install xfce4 -y
 sudo apt install curl -y
 
