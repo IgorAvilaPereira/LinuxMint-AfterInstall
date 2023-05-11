@@ -162,7 +162,7 @@ sudo apt install pdfchain -y
 sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
 sudo apt install keepassxc -y
-sudo apt install virtualbox -y
+# sudo apt install virtualbox -y
 sudo apt install retext -y
 sudo apt install cmatrix -y
 sudo apt install neofetch -y
@@ -243,10 +243,6 @@ sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key
 # sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(UBUNTU_NAME) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 sudo apt update && sudo apt install pgadmin4-desktop -y 
-
-
-
-
 
 # gem dependencies
 #sudo apt install libpq-dev -y
