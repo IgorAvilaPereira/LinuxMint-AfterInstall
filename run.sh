@@ -191,7 +191,6 @@ sudo apt install libu2f-udev -y
 sudo apt install libc6 -y
 sudo apt install libpq-dev -y
 
-
 sudo apt install -f -y
 sudo apt --fix-broken install -y
 
