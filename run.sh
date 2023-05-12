@@ -249,7 +249,6 @@ sudo apt update && sudo apt install pgadmin4-desktop -y
 
 # gem dependencies
 #sudo apt install libpq-dev -y
-#sudo killall synaptic
 #sudo gem install pg
 #sudo gem install sinatra
 
