@@ -165,6 +165,7 @@ sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
 sudo apt install keepassxc -y
 # sudo apt install virtualbox -y
+sudo apt install gnome-boxes -y
 sudo apt install retext -y
 sudo apt install cmatrix -y
 sudo apt install neofetch -y
@@ -189,7 +190,6 @@ sudo apt install libc++1 -y
 sudo apt install libu2f-udev -y
 sudo apt install libc6 -y
 sudo apt install libpq-dev -y
-sudo apt install gnome-boxes -y
 
 
 sudo apt install -f -y
