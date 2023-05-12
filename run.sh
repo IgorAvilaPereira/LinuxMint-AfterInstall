@@ -71,7 +71,8 @@ sudo apt install unzip -y
 unzip $NAME_GTILE_EXTENSION -d $EXTENSIONS_FOLDER
 unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 
-# echo 'GenerateEvaluationSheetToStudents=python3 /home/iapereira/git/GenerateEvaluationSheetToStudents/app.py 
+# echo 'ImportMacAdress=python3 /home/iapereira/git/scripts-coordenacao/mac_selenium.py
+# GenerateEvaluationSheetToStudents=python3 /home/iapereira/git/GenerateEvaluationSheetToStudents/app.py 
 # PDF Annots=python3 /home/iapereira/git/pdfannots-tkinter-app/main.py
 # Youtube Downloader=python3 /home/iapereira/git/youtube-download/main.py
 # Latex From Figures=java -jar /home/iapereira/git/LatexPresentationFromFigures/dist/LatexPresentationFromFigures.jar
