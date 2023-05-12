@@ -110,6 +110,7 @@ sudo pip3 install pyinstaller
 sudo pip3 install SpeechRecognition
 sudo pip3 install pdfannots
 sudo pip3 install pyautogui pillow mouseinfo
+sudo pip3 install stdiomask
 
 # php
 sudo apt install php8.1 -y
