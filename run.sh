@@ -71,14 +71,11 @@ sudo apt install unzip -y
 unzip $NAME_GTILE_EXTENSION -d $EXTENSIONS_FOLDER
 unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 
-#echo '[MS] -----------------
-#GenerateEvaluationSheetToStudents=python3 /home/iapereira/git/GenerateEvaluationSheetToStudents/app.py 
-#PDF Annots=python3 /home/iapereira/git/pdfannots-tkinter-app/main.py
-#Youtube Downloader=python3 /home/iapereira/git/youtube-download/main.py
-#[MS] -----------------
-#Latex From Figures=java -jar /home/iapereira/git/LatexPresentationFromFigures/dist/LatexPresentationFromFigures.jar
-#[MS] -----------------
-#Distribuição da Carga Horária=firefox  /home/iapereira/git/DistribuicaoDeDisciplinas/carga_horaria.html' >> "${APPLETS_FOLDER}mylauncher@markbokil.com/mylauncher.properties"
+# echo 'GenerateEvaluationSheetToStudents=python3 /home/iapereira/git/GenerateEvaluationSheetToStudents/app.py 
+# PDF Annots=python3 /home/iapereira/git/pdfannots-tkinter-app/main.py
+# Youtube Downloader=python3 /home/iapereira/git/youtube-download/main.py
+# Latex From Figures=java -jar /home/iapereira/git/LatexPresentationFromFigures/dist/LatexPresentationFromFigures.jar
+# Distribuição da Carga Horária=firefox  /home/iapereira/git/DistribuicaoDeDisciplinas/carga_horaria.html' >> "${APPLETS_FOLDER}mylauncher@markbokil.com/mylauncher.properties"
 
 # other desktop enviroment (for poor pc)
 # sudo apt install xfce4 -y
@@ -136,7 +133,7 @@ sudo apt install sqlite3 -y
 sudo apt install apache2 -y
 sudo apt install docker.io -y
 sudo apt install git -y 
-#mkdir "$HOME/git"
+mkdir "$HOME/git"
 
 # audio/video
 sudo apt install audacious     -y  
