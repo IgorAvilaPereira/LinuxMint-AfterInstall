@@ -133,7 +133,7 @@ sudo apt install sqlite3 -y
 sudo apt install apache2 -y
 sudo apt install docker.io -y
 sudo apt install git -y 
-mkdir "$HOME/git"
+# mkdir "$HOME/git"
 
 # audio/video
 sudo apt install audacious     -y  
