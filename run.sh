@@ -150,7 +150,7 @@ sudo apt install kolourpaint -y
 sudo apt install ksnip -y
 sudo apt install shotwell -y 
 sudo apt install simplescreenrecorder -y
-sudo apt install vokoscreen-ng -y
+# sudo apt install vokoscreen-ng -y
 sudo apt install gstreamer1.0-plugins-ugly -y
 sudo apt install vlc -y
 sudo apt install simple-scan -y
@@ -262,7 +262,7 @@ sudo apt update && sudo apt install pgadmin4-desktop -y
 # Flatpaks
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-#sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenNG
+sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenNG
 sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
