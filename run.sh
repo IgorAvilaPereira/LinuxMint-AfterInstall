@@ -96,6 +96,7 @@ sudo apt install openjdk-19-jre -y
 # python
 sudo apt install python3.11-full -y
 sudo apt install python3-pip -y
+sudo apt install python-is-python3 -y
 
 # pip packages
 sudo pip3 install flask
