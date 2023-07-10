@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# UBUNTU_NAME="$(cat /etc/upstream-release/lsb-release | grep 'DISTRIB_CODENAME' |  cut -d '=' -f 2)"
+
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 
@@ -9,7 +11,9 @@ sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
 
-# UBUNTU_NAME="$(cat /etc/upstream-release/lsb-release | grep 'DISTRIB_CODENAME' |  cut -d '=' -f 2)"
+# destkops enviroments
+sudo apt install mint-meta-xfce -y
+# sudo apt install mint-meta-mate -y
 
 # extensions and applets cinamoon
 EXTENSIONS_FOLDER="$HOME/.local/share/cinnamon/extensions/"
