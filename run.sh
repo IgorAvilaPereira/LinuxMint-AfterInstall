@@ -131,7 +131,7 @@ sudo apt install php8.1-sqlite3 -y
 #  ruby
 sudo apt install ruby-full -y
 sudo apt install bwidget -y
-sudo apt install jekyll -y
+# sudo apt install jekyll -y
 
 # databases
 sudo apt install redis-server -y
