@@ -35,7 +35,7 @@ URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/d
 URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 NAME_DISCORD="${DOWNLOAD_FOLDER}/discord.deb"
-URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/18/apache-netbeans_18-1_all.deb"
+URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/19/apache-netbeans_19-1_all.deb"
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
 URL_PDF_STUDIO_VIEWER="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
 URL_EMBY_SERVER="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.7.11.0/emby-server-deb_4.7.11.0_amd64.deb"
@@ -85,8 +85,14 @@ unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 # other desktop enviroment (for poor pc)
 # sudo apt install xfce4 -y
 
+# extract here in thunar
+# sudo apt install thunar-archive-plugin -y
+
+# power manager applet for xfce4
+# sudo apt install xfce4-power-manager -y
+
 # apt's programs (installed from ubuntu/mint repositories)
-sudo apt install curl -y
+# sudo apt install curl -y
 
 # codecs
 sudo apt install mint-meta-codecs  -y
