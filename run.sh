@@ -88,6 +88,9 @@ unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 # extract here in thunar
 # sudo apt install thunar-archive-plugin -y
 
+# dropbox for thunar
+# sudo apt install thunar-dropbox-plugin -y
+
 # power manager applet for xfce4
 # sudo apt install xfce4-power-manager -y
 
