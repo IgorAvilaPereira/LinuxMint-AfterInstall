@@ -49,7 +49,7 @@ NAME_MYLAUNCHER_APPLET="${DOWNLOAD_FOLDER}/mylauncher@markbokil.com.zip"
 # download deb's program
 #wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER"
 #wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
-#wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER" 
+wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER" 
 #wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER"
 
 # wget -cO $NAME_VSCODE "$URL_VSCODE"         -P "$DOWNLOAD_FOLDER"
@@ -83,19 +83,19 @@ unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 # Distribuição da Carga Horária=firefox  /home/iapereira/git/DistribuicaoDeDisciplinas/carga_horaria.html' >> "${APPLETS_FOLDER}mylauncher@markbokil.com/mylauncher.properties"
 
 # other desktop enviroment (for poor pc)
-# sudo apt install xfce4 -y
+sudo apt install xfce4 -y
 
 # extract here in thunar
-# sudo apt install thunar-archive-plugin -y
+sudo apt install thunar-archive-plugin -y
 
 # dropbox for thunar
-# sudo apt install thunar-dropbox-plugin -y
+sudo apt install thunar-dropbox-plugin -y
 
 # power manager applet for xfce4
-# sudo apt install xfce4-power-manager -y
+sudo apt install xfce4-power-manager -y
 
 # apt's programs (installed from ubuntu/mint repositories)
-# sudo apt install curl -y
+sudo apt install curl -y
 
 # codecs
 sudo apt install mint-meta-codecs  -y
