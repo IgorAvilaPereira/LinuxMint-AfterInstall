@@ -23,6 +23,7 @@ DOWNLOAD_FOLDER="$HOME/Downloads/softwares"
 mkdir "$DOWNLOAD_FOLDER"
 
 # url's deb's program
+URL_IRIUNWEBCAM="https://iriun.gitlab.io/iriunwebcam-2.8.1.deb"
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-jammy_amd64.deb"
 URL_INSYNC_NEMO="https://cdn.insynchq.com/builds/linux/insync-nemo_3.7.9.50368_all.deb"
@@ -54,6 +55,7 @@ wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER"
 
 # wget -cO $NAME_VSCODE "$URL_VSCODE"         -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_GOOGLE_CHROME"                -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_IRIUNWEBCAM"                  -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_INSYNC"                       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_INSYNC_ICONS"                 -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_INSYNC_NEMO"                  -P "$DOWNLOAD_FOLDER"
