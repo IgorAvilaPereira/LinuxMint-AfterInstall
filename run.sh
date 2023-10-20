@@ -24,26 +24,46 @@ mkdir "$DOWNLOAD_FOLDER"
 
 # url's deb's program
 URL_IRIUNWEBCAM="https://iriun.gitlab.io/iriunwebcam-2.8.1.deb"
+
+URL_INSOMNIA="https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website"
+NAME_INSOMNIA="${DOWNLOAD_FOLDER}/insomnia.deb"
+
+URL_POSTMAN="https://dl.pstmn.io/download/latest/linux_64"
+
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+
 URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-jammy_amd64.deb"
 URL_INSYNC_NEMO="https://cdn.insynchq.com/builds/linux/insync-nemo_3.7.9.50368_all.deb"
 URL_INSYNC_ICONS="http://apt.insync.io/ubuntu/pool/contrib/i/insync-emblem-icons/insync-emblem-icons_3.4.2.40983_all.deb"
+
 URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 NAME_VSCODE="${DOWNLOAD_FOLDER}/vscode.deb"
+
 URL_MEGA="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb"
 URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbuntu_22.04_amd64.deb"
+
 URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb"
+
 URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
+
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 NAME_DISCORD="${DOWNLOAD_FOLDER}/discord.deb"
+
 URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/19/apache-netbeans_19-1_all.deb"
+
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
+
 URL_PDF_STUDIO_VIEWER="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
+
 URL_EMBY_SERVER="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.7.11.0/emby-server-deb_4.7.11.0_amd64.deb"
+
 URL_DBEAVER="https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
+
 URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download/v1.5.0/simple-signer.deb"
+
 URL_GTILE_EXTENSION="https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip?time=1683484780"
 NAME_GTILE_EXTENSION="${DOWNLOAD_FOLDER}/gTile@shuairan.zip"
+
 URL_MYLAUNCHER_APPLET="https://cinnamon-spices.linuxmint.com/files/applets/mylauncher@markbokil.com.zip?time=1683739498"
 NAME_MYLAUNCHER_APPLET="${DOWNLOAD_FOLDER}/mylauncher@markbokil.com.zip"
 
@@ -51,8 +71,8 @@ NAME_MYLAUNCHER_APPLET="${DOWNLOAD_FOLDER}/mylauncher@markbokil.com.zip"
 #wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER"
 #wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DBEAVER"                      -P "$DOWNLOAD_FOLDER" 
+wget -c "$URL_POSTMAN"                      -P "$DOWNLOAD_FOLDER" 
 #wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER"
-
 # wget -cO $NAME_VSCODE "$URL_VSCODE"         -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_GOOGLE_CHROME"                -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_IRIUNWEBCAM"                  -P "$DOWNLOAD_FOLDER"
@@ -66,6 +86,7 @@ wget -c "$URL_JDK"                          -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_PDF_STUDIO_VIEWER"            -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_EMBY_SERVER"                  -P "$DOWNLOAD_FOLDER" 
 wget -cO $NAME_DISCORD "$URL_DISCORD"       -P "$DOWNLOAD_FOLDER"
+wget -cO $NAME_INSOMNIA "$URL_INSOMNIA"       -P "$DOWNLOAD_FOLDER"
 
 # manager window to cinamoon
 wget -cO $NAME_GTILE_EXTENSION "$URL_GTILE_EXTENSION"     -P "$DOWNLOAD_FOLDER"
