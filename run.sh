@@ -238,6 +238,9 @@ sudo apt install -f -y
 sudo apt --fix-broken install -y
 
 # ppa's
+sudo apt-add-repository --yes ppa:yktooo/ppa
+sudo apt update && sudo apt install indicator-sound-switcher -y
+
 sudo add-apt-repository --yes ppa:sunderme/texstudio
 sudo apt update && sudo apt install texstudio -y
 
