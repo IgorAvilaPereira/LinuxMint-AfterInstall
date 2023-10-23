@@ -195,6 +195,7 @@ sudo apt install simplescreenrecorder -y
 sudo apt install gstreamer1.0-plugins-ugly -y
 sudo apt install vlc -y
 sudo apt install simple-scan -y
+sudo apt install graphviz -y
 
 # pdf 
 sudo apt install pdfarranger -y            
