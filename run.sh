@@ -206,6 +206,7 @@ sudo apt install pdfchain -y
 # others
 sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
+sudo apt install caja -y
 sudo apt install caja-dropbox -y
 sudo apt install keepassxc -y
 # sudo apt install virtualbox -y
