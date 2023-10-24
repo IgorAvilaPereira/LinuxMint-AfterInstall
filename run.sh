@@ -117,6 +117,7 @@ sudo apt install thunar-dropbox-plugin -y
 # power manager applet for xfce4
 sudo apt install xfce4-power-manager -y
 
+
 # apt's programs (installed from ubuntu/mint repositories)
 sudo apt install curl -y
 
@@ -163,7 +164,7 @@ sudo apt install php8.1-sqlite3 -y
 #  ruby
 sudo apt install ruby-full -y
 sudo apt install bwidget -y
-# sudo apt install jekyll -y
+sudo apt install jekyll -y
 
 # databases
 sudo apt install redis-server -y
@@ -205,6 +206,7 @@ sudo apt install pdfchain -y
 # others
 sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
+sudo apt install caja-dropbox -y
 sudo apt install keepassxc -y
 # sudo apt install virtualbox -y
 sudo apt install gnome-boxes -y
