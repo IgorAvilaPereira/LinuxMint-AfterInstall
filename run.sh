@@ -110,13 +110,10 @@ unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 
 # other desktop enviroment (for poor pc)
 sudo apt install xfce4 -y
-
 # extract here in thunar
 sudo apt install thunar-archive-plugin -y
-
 # dropbox for thunar
 sudo apt install thunar-dropbox-plugin -y
-
 # power manager applet for xfce4
 sudo apt install xfce4-power-manager -y
 
@@ -183,6 +180,7 @@ sudo apt install audacious     -y
 sudo apt install audacity -y
 sudo apt install cheese -y
 sudo apt install winff -y
+sudo apt install soundconverter -y
 
 # diagrams/graphics
 sudo apt install dia -y
