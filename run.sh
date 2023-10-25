@@ -185,7 +185,7 @@ sudo apt install soundconverter -y
 
 # diagrams/graphics
 sudo apt install dia -y
-sudo apt install dia2code -y
+# sudo apt install dia2code -y
 sudo apt install plantuml -y
 sudo apt install kolourpaint -y
 sudo apt install ksnip -y
