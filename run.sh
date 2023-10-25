@@ -185,6 +185,7 @@ sudo apt install soundconverter -y
 
 # diagrams/graphics
 sudo apt install dia -y
+sudo apt install dia2code -y
 sudo apt install plantuml -y
 sudo apt install kolourpaint -y
 sudo apt install ksnip -y
@@ -209,8 +210,8 @@ sudo apt install nemo-dropbox -y
 sudo apt install caja -y
 sudo apt install caja-dropbox -y
 sudo apt install keepassxc -y
-# sudo apt install virtualbox -y
-sudo apt install gnome-boxes -y
+sudo apt install virtualbox -y
+# sudo apt install gnome-boxes -y
 sudo apt install retext -y
 sudo apt install cmatrix -y
 sudo apt install neofetch -y
