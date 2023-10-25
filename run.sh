@@ -212,6 +212,8 @@ sudo apt install caja -y
 sudo apt install caja-dropbox -y
 sudo apt install keepassxc -y
 sudo apt install virtualbox -y
+sudo apt install virtualbox-ext-pack -y 
+sudo apt install virtualbox-guest-additions-iso -y
 # sudo apt install gnome-boxes -y
 sudo apt install retext -y
 sudo apt install cmatrix -y
