@@ -189,6 +189,7 @@ sudo apt install dia -y
 sudo apt install plantuml -y
 sudo apt install kolourpaint -y
 sudo apt install ksnip -y
+sudo apt install flameshot -y 
 sudo apt install shotwell -y 
 sudo apt install simplescreenrecorder -y
 # sudo apt install vokoscreen-ng -y
