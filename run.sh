@@ -219,6 +219,8 @@ sudo apt install neofetch -y
 # sudo apt install psensor  -y
 # sudo apt install synapse  -y
 sudo apt install filezilla -y
+sudo apt install hplip -y 
+sudo apt install hplip-gui -y 
 
 # ssh
 sudo apt install openssh-client -y
