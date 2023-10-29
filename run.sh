@@ -63,19 +63,13 @@ URL_BEEKEPPER="https://github.com/beekeeper-studio/beekeeper-studio/releases/dow
 
 URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download/v1.5.0/simple-signer.deb"
 
-URL_GTILE_EXTENSION="https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip?time=1683484780"
-NAME_GTILE_EXTENSION="${DOWNLOAD_FOLDER}/gTile@shuairan.zip"
-
-URL_MYLAUNCHER_APPLET="https://cinnamon-spices.linuxmint.com/files/applets/mylauncher@markbokil.com.zip?time=1683739498"
-NAME_MYLAUNCHER_APPLET="${DOWNLOAD_FOLDER}/mylauncher@markbokil.com.zip"
-
 # download deb's program
 #wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER"
 #wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DBEAVER"                       -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_BEEKEPPER"                     -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_POSTMAN"                       -P "$DOWNLOAD_FOLDER" 
-#wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER"
+# wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER"
 # wget -cO $NAME_VSCODE "$URL_VSCODE"        -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_GOOGLE_CHROME"                 -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_IRIUNWEBCAM"                   -P "$DOWNLOAD_FOLDER"
@@ -92,10 +86,12 @@ wget -cO $NAME_DISCORD "$URL_DISCORD"        -P "$DOWNLOAD_FOLDER"
 wget -cO $NAME_INSOMNIA "$URL_INSOMNIA"      -P "$DOWNLOAD_FOLDER"
 
 # manager window to cinamoon
+URL_GTILE_EXTENSION="https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip?time=1683484780"
+NAME_GTILE_EXTENSION="${DOWNLOAD_FOLDER}/gTile@shuairan.zip"
+URL_MYLAUNCHER_APPLET="https://cinnamon-spices.linuxmint.com/files/applets/mylauncher@markbokil.com.zip?time=1683739498"
+NAME_MYLAUNCHER_APPLET="${DOWNLOAD_FOLDER}/mylauncher@markbokil.com.zip"
 wget -cO $NAME_GTILE_EXTENSION "$URL_GTILE_EXTENSION"         -P "$DOWNLOAD_FOLDER"
-# launcher applications
 wget -cO $NAME_MYLAUNCHER_APPLET "$URL_MYLAUNCHER_APPLET"     -P "$DOWNLOAD_FOLDER"
-
 # extract gTile extension and My Launch applet
 sudo apt install unzip -y
 unzip $NAME_GTILE_EXTENSION -d $EXTENSIONS_FOLDER
@@ -109,14 +105,13 @@ unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 # Distribuição da Carga Horária=firefox  /home/iapereira/git/DistribuicaoDeDisciplinas/carga_horaria.html' >> "${APPLETS_FOLDER}mylauncher@markbokil.com/mylauncher.properties"
 
 # other desktop enviroment (for poor pc)
-sudo apt install xfce4 -y
+# sudo apt install xfce4 -y
 # extract here in thunar
 sudo apt install thunar-archive-plugin -y
 # dropbox for thunar
 sudo apt install thunar-dropbox-plugin -y
 # power manager applet for xfce4
 sudo apt install xfce4-power-manager -y
-
 
 # apt's programs (installed from ubuntu/mint repositories)
 sudo apt install curl -y
