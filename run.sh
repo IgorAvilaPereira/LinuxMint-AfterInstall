@@ -221,6 +221,7 @@ sudo apt install neofetch -y
 sudo apt install filezilla -y
 sudo apt install hplip -y 
 sudo apt install hplip-gui -y 
+sudo apt install stacer -y
 
 # ssh
 sudo apt install openssh-client -y
