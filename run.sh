@@ -44,7 +44,7 @@ URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbu
 
 URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb"
 
-URL_JDK="https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb"
+URL_JDK="https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb"
 
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 NAME_DISCORD="${DOWNLOAD_FOLDER}/discord.deb"
