@@ -182,7 +182,7 @@ sudo apt install soundconverter -y
 sudo apt install dia -y
 # sudo apt install dia2code -y
 sudo apt install plantuml -y
-sudo apt install kolourpaint -y
+# sudo apt install kolourpaint -y
 sudo apt install ksnip -y
 sudo apt install flameshot -y 
 sudo apt install shotwell -y 
@@ -315,6 +315,7 @@ sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloade
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
 sudo flatpak install -y --noninteractive flathub io.github.flattool.Warehouse
+sudo flatpak install -y --noninteractive flathub org.kde.kolourpaint
 # if you want to install mendeley
 # sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
 
