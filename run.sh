@@ -180,7 +180,10 @@ sudo apt install soundconverter -y
 sudo apt install v4l-utils -y
 sudo apt install ffmpeg -y
 sudo apt install mplayer -y
-
+sudo apt install simplescreenrecorder -y
+# sudo apt install vokoscreen-ng -y
+sudo apt install gstreamer1.0-plugins-ugly -y
+sudo apt install vlc -y
 
 # diagrams/graphics
 sudo apt install dia -y
@@ -190,10 +193,6 @@ sudo apt install plantuml -y
 sudo apt install ksnip -y
 sudo apt install flameshot -y 
 sudo apt install shotwell -y 
-sudo apt install simplescreenrecorder -y
-# sudo apt install vokoscreen-ng -y
-sudo apt install gstreamer1.0-plugins-ugly -y
-sudo apt install vlc -y
 sudo apt install simple-scan -y
 sudo apt install graphviz -y
 
