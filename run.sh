@@ -112,6 +112,7 @@ sudo apt install thunar-archive-plugin -y
 sudo apt install thunar-dropbox-plugin -y
 # power manager applet for xfce4
 sudo apt install xfce4-power-manager -y
+sudo apt install xfce4-pulseaudio-plugin -y
 
 # apt's programs (installed from ubuntu/mint repositories)
 sudo apt install curl -y
