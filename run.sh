@@ -179,6 +179,7 @@ sudo apt install cheese -y
 sudo apt install winff -y
 sudo apt install soundconverter -y
 sudo apt install v4l-utils -y
+sudo apt install v4l2-ctl -y
 sudo apt install ffmpeg -y
 sudo apt install mplayer -y
 sudo apt install simplescreenrecorder -y
