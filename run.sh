@@ -185,6 +185,9 @@ sudo apt install simplescreenrecorder -y
 # sudo apt install vokoscreen-ng -y
 sudo apt install gstreamer1.0-plugins-ugly -y
 sudo apt install vlc -y
+# sudo apt install v4l-utils -y
+# sudo apt install ffmpeg -y
+# sudo apt install mplayer -y
 
 # diagrams/graphics
 sudo apt install dia -y
