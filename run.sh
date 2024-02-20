@@ -230,6 +230,11 @@ sudo apt install filezilla -y
 sudo apt install hplip -y 
 sudo apt install hplip-gui -y 
 sudo apt install stacer -y
+sudo apt install ranger -y
+sudo apt install speedtest-cli  -y
+sudo apt install btop  -y
+sudo apt install feh -y
+sudo apt install httpie -y 
 
 # ssh
 sudo apt install openssh-client -y
