@@ -235,6 +235,8 @@ sudo apt install speedtest-cli  -y
 sudo apt install btop  -y
 sudo apt install feh -y
 sudo apt install httpie -y 
+sudo apt install syncthing -y 
+sudo apt install syncthing-gtk -y 
 
 # ssh
 sudo apt install openssh-client -y
