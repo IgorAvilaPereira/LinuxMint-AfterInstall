@@ -42,7 +42,7 @@ NAME_VSCODE="${DOWNLOAD_FOLDER}/vscode.deb"
 URL_MEGA="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb"
 URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbuntu_22.04_amd64.deb"
 
-URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb"
+URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v23.1.5/drawio-amd64-23.1.5.deb"
 
 URL_JDK="https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb"
 
@@ -65,7 +65,7 @@ URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download
 
 # download deb's program
 #wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER"
-#wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DBEAVER"                       -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_BEEKEPPER"                     -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_POSTMAN"                       -P "$DOWNLOAD_FOLDER" 
