@@ -237,6 +237,7 @@ sudo apt install feh -y
 sudo apt install httpie -y 
 sudo apt install syncthing -y 
 sudo apt install syncthing-gtk -y 
+sudo apt install unrar -y 
 
 # ssh
 sudo apt install openssh-client -y
