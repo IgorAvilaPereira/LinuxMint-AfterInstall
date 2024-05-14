@@ -49,7 +49,7 @@ URL_JDK="https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb"
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 NAME_DISCORD="${DOWNLOAD_FOLDER}/discord.deb"
 
-URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/20/apache-netbeans_20-1_all.deb"
+URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/21/apache-netbeans_21-1_all.deb"
 
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
 
@@ -146,6 +146,7 @@ sudo pip3 install SpeechRecognition
 sudo pip3 install pdfannots
 sudo pip3 install pyautogui pillow mouseinfo
 sudo pip3 install stdiomask
+sudo pip3 install hyfetch
 
 # php
 sudo apt install php8.1 -y
@@ -220,12 +221,13 @@ sudo apt install virtualbox-guest-additions-iso -y
 # sudo apt install gnome-boxes -y
 sudo apt install retext -y
 sudo apt install cmatrix -y
-sudo apt install neofetch -y
+# the repository has been archived 
+# sudo apt install neofetch -y
 # sudo apt install gdebi -y
 # sudo apt install gdebi-gtk -y
 # sudo apt install gimp -y
 # sudo apt install psensor  -y
-# sudo apt install synapse  -y
+sudo apt install synapse  -y
 sudo apt install filezilla -y
 sudo apt install hplip -y 
 sudo apt install hplip-gui -y 
