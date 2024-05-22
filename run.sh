@@ -337,6 +337,7 @@ sudo flatpak install -y --noninteractive flathub org.kde.kolourpaint
 sudo flatpak install -y --noninteractive flathub org.localsend.localsend_app
 sudo flatpak install -y --noninteractive flathub io.github.adrienverge.PhotoCollage
 sudo flatpak install -y --noninteractive flathub it.mijorus.gearlever
+sudo flatpak install -y --noninteractive flathub me.iepure.devtoolbox
 
 # if you want to install mendeley
 # sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
