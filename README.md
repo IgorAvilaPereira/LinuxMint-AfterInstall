@@ -13,3 +13,5 @@ sudo chmod 777 run.sh
 ./run.sh
 ```
 
+obs: se desejar instalar o driver do adaptador usb to hdmi, será preciso ir até https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu e realizar os passos.
+
