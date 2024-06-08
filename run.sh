@@ -55,7 +55,7 @@ URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/
 
 URL_PDF_STUDIO_VIEWER="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
 
-URL_EMBY_SERVER="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.7.11.0/emby-server-deb_4.7.11.0_amd64.deb"
+URL_EMBY_SERVER="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.8.8.0/emby-server-deb_4.8.8.0_amd64.deb"
 
 URL_DBEAVER="https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
 
@@ -337,6 +337,7 @@ sudo flatpak install -y --noninteractive flathub org.kde.kolourpaint
 sudo flatpak install -y --noninteractive flathub org.localsend.localsend_app
 sudo flatpak install -y --noninteractive flathub io.github.adrienverge.PhotoCollage
 sudo flatpak install -y --noninteractive flathub it.mijorus.gearlever
+sudo flatpak install -y --noninteractive flathub org.gnome.gitlab.YaLTeR.VideoTrimmer
 # sudo flatpak install -y --noninteractive flathub me.iepure.devtoolbox
 
 # if you want to install mendeley
