@@ -214,6 +214,7 @@ sudo apt install pdfchain -y
 sudo apt install dropbox -y
 sudo apt install nemo-dropbox -y
 sudo apt install nemo-image-converter -y
+sudo apt install nemo-terminal -y
 sudo apt install caja -y
 sudo apt install caja-dropbox -y
 sudo apt install keepassxc -y
