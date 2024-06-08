@@ -190,6 +190,7 @@ sudo apt install vlc -y
 # sudo apt install v4l-utils -y
 # sudo apt install ffmpeg -y
 # sudo apt install mplayer -y
+sudo apt install mkvtoolnix -y
 
 # diagrams/graphics
 sudo apt install dia -y
