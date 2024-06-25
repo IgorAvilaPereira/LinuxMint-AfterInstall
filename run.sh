@@ -63,13 +63,16 @@ URL_BEEKEPPER="https://github.com/beekeeper-studio/beekeeper-studio/releases/dow
 
 URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download/v1.5.0/simple-signer.deb"
 
+URL_MINI_VIDEO_ME="https://github.com/maykbrito/mini-video-me/releases/download/v4.0.2/mini-video-me_4.0.2_amd64.deb"
+
 # download deb's program
 #wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER"
-wget -c "$URL_DRAWIO"                       -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_MINI_VIDEO_ME"                 -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_DRAWIO"                        -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DBEAVER"                       -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_BEEKEPPER"                     -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_POSTMAN"                       -P "$DOWNLOAD_FOLDER" 
-# wget -c "$URL_SIMPLE_SIGNER"                -P "$DOWNLOAD_FOLDER"
+# wget -c "$URL_SIMPLE_SIGNER"               -P "$DOWNLOAD_FOLDER"
 # wget -cO $NAME_VSCODE "$URL_VSCODE"        -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_GOOGLE_CHROME"                 -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_IRIUNWEBCAM"                   -P "$DOWNLOAD_FOLDER"
