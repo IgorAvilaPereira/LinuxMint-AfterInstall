@@ -65,10 +65,12 @@ URL_BEEKEPPER="https://github.com/beekeeper-studio/beekeeper-studio/releases/dow
 URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download/v1.5.0/simple-signer.deb"
 
 URL_MINI_VIDEO_ME="https://github.com/maykbrito/mini-video-me/releases/download/v4.0.2/mini-video-me_4.0.2_amd64.deb"
+URL_BALENA="https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher_1.19.25_amd64.deb"
 
 # download deb's program
 #wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_MINI_VIDEO_ME"                 -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_BALENA"                        -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DRAWIO"                        -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DBEAVER"                       -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_BEEKEPPER"                     -P "$DOWNLOAD_FOLDER" 
