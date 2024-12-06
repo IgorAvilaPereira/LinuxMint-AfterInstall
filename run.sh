@@ -232,8 +232,7 @@ sudo apt install virtualbox-guest-additions-iso -y
 # sudo apt install gnome-boxes -y
 sudo apt install retext -y
 sudo apt install cmatrix -y
-# the repository has been archived 
-# sudo apt install neofetch -y
+sudo apt install neofetch -y
 # sudo apt install gdebi -y
 # sudo apt install gdebi-gtk -y
 # sudo apt install gimp -y
@@ -274,15 +273,19 @@ sudo apt --fix-broken install -y
 sudo apt-add-repository --yes ppa:yktooo/ppa
 sudo apt update && sudo apt install indicator-sound-switcher -y
 
+# texstudio
 sudo add-apt-repository --yes ppa:sunderme/texstudio
 sudo apt update && sudo apt install texstudio -y
 
+# obs-studo
 sudo add-apt-repository --yes ppa:obsproject/obs-studio
 sudo apt update && sudo apt install obs-studio -y
 
+# dbeaver
 sudo add-apt-repository --yes ppa:serge-rider/dbeaver-ce
 sudo apt update && sudo apt install dbeaver-ce -y
 
+# vscode
 sudo apt install software-properties-common apt-transport-https wget -y
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository --yes "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
@@ -294,6 +297,7 @@ sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
 
+# brave
 sudo apt install curl  -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -314,12 +318,6 @@ sudo apt autoclean
 sudo apt autoremove -y
 
 # specials
-
-# Spotify 
-#curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-#echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-#sudo apt-get update && sudo apt-get install spotify-client -y
-
 
 # PostgreSQL
 # sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(UBUNTU_NAME)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -359,13 +357,8 @@ sudo flatpak install -y --noninteractive flathub org.gnome.gitlab.YaLTeR.VideoTr
 sudo flatpak install -y --noninteractive flathub org.localsend.localsend_app
 sudo flatpak install -y --noninteractive flathub com.rtosta.zapzap
 sudo flatpak install -y --noninteractive flathub com.dec05eba.gpu_screen_recorder
-
 # sudo flatpak install -y --noninteractive flathub me.iepure.devtoolbox
-
-# if you want to install mendeley
 # sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
-
-
 
 sudo apt update 
 sudo apt list --upgradable
@@ -373,3 +366,10 @@ sudo apt dist-upgrade -y
 sudo flatpak update
 sudo apt autoclean
 sudo apt autoremove -y
+
+# snap in Linux Mint
+sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
+sudo apt update 
+sudo apt install snapd -y
+# spotify snap version
+sudo snap install spotify
