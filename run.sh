@@ -358,7 +358,7 @@ sudo flatpak install -y --noninteractive flathub it.mijorus.gearlever
 sudo flatpak install -y --noninteractive flathub org.gnome.gitlab.YaLTeR.VideoTrimmer
 sudo flatpak install -y --noninteractive flathub org.localsend.localsend_app
 sudo flatpak install -y --noninteractive flathub com.rtosta.zapzap
-sudo flatpak install -y flathub com.dec05eba.gpu_screen_recorder
+sudo flatpak install -y --noninteractive flathub com.dec05eba.gpu_screen_recorder
 
 # sudo flatpak install -y --noninteractive flathub me.iepure.devtoolbox
 
