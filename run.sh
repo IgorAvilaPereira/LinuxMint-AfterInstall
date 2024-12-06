@@ -29,6 +29,7 @@ URL_INSOMNIA="https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.ins
 NAME_INSOMNIA="${DOWNLOAD_FOLDER}/insomnia.deb"
 
 URL_POSTMAN="https://dl.pstmn.io/download/latest/linux_64"
+NAME_POSTMAN="${DOWNLOAD_FOLDER}/postman-linux-x64.tar.gz"
 
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
@@ -49,7 +50,7 @@ URL_JDK="https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb"
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 NAME_DISCORD="${DOWNLOAD_FOLDER}/discord.deb"
 
-URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/21/apache-netbeans_21-1_all.deb"
+URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/23/apache-netbeans_23-1_all.deb"
 
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
 
@@ -71,7 +72,6 @@ wget -c "$URL_MINI_VIDEO_ME"                 -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DRAWIO"                        -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DBEAVER"                       -P "$DOWNLOAD_FOLDER" 
 wget -c "$URL_BEEKEPPER"                     -P "$DOWNLOAD_FOLDER" 
-wget -c "$URL_POSTMAN"                       -P "$DOWNLOAD_FOLDER" 
 # wget -c "$URL_SIMPLE_SIGNER"               -P "$DOWNLOAD_FOLDER"
 # wget -cO $NAME_VSCODE "$URL_VSCODE"        -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_GOOGLE_CHROME"                 -P "$DOWNLOAD_FOLDER"
@@ -87,12 +87,15 @@ wget -c "$URL_PDF_STUDIO_VIEWER"             -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_EMBY_SERVER"                   -P "$DOWNLOAD_FOLDER" 
 wget -cO $NAME_DISCORD "$URL_DISCORD"        -P "$DOWNLOAD_FOLDER"
 wget -cO $NAME_INSOMNIA "$URL_INSOMNIA"      -P "$DOWNLOAD_FOLDER"
+wget -cO $NAME_POSTMAN "$URL_POSTMAN"        -P "$DOWNLOAD_FOLDER"
 
 # manager window to cinamoon
 URL_GTILE_EXTENSION="https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip?time=1683484780"
 NAME_GTILE_EXTENSION="${DOWNLOAD_FOLDER}/gTile@shuairan.zip"
 URL_MYLAUNCHER_APPLET="https://cinnamon-spices.linuxmint.com/files/applets/mylauncher@markbokil.com.zip?time=1683739498"
 NAME_MYLAUNCHER_APPLET="${DOWNLOAD_FOLDER}/mylauncher@markbokil.com.zip"
+
+
 wget -cO $NAME_GTILE_EXTENSION "$URL_GTILE_EXTENSION"         -P "$DOWNLOAD_FOLDER"
 wget -cO $NAME_MYLAUNCHER_APPLET "$URL_MYLAUNCHER_APPLET"     -P "$DOWNLOAD_FOLDER"
 # extract gTile extension and My Launch applet
@@ -126,11 +129,11 @@ sudo apt install ffmpeg -y
 sudo apt install gstreamer1.0-plugins-ugly -y
 
 #  java
-sudo apt install openjdk-19-jdk -y
-sudo apt install openjdk-19-jre -y
+sudo apt install openjdk-21-jdk -y
+sudo apt install openjdk-21-jre -y
 
 # python
-sudo apt install python3.11-full -y
+sudo apt install python3.12-full -y
 sudo apt install python3-pip -y
 sudo apt install python-is-python3 -y
 
@@ -289,6 +292,12 @@ sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
 
+sudo apt install curl  -y
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser  -y
+
 # maybe to try sudo apt install ./$DOWNLOAD_FOLDER/*.deb -y ??
 sudo dpkg -i $DOWNLOAD_FOLDER/*.deb
 sudo apt install -f -y
@@ -305,9 +314,10 @@ sudo apt autoremove -y
 # specials
 
 # Spotify 
-curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt update && sudo apt install spotify-client -y
+#curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+#echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+#sudo apt-get update && sudo apt-get install spotify-client -y
+
 
 # PostgreSQL
 # sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(UBUNTU_NAME)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -346,10 +356,13 @@ sudo flatpak install -y --noninteractive flathub it.mijorus.gearlever
 sudo flatpak install -y --noninteractive flathub org.gnome.gitlab.YaLTeR.VideoTrimmer
 sudo flatpak install -y --noninteractive flathub org.localsend.localsend_app
 sudo flatpak install -y --noninteractive flathub com.rtosta.zapzap
+
 # sudo flatpak install -y --noninteractive flathub me.iepure.devtoolbox
 
 # if you want to install mendeley
 # sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
+
+
 
 sudo apt update 
 sudo apt list --upgradable
