@@ -138,6 +138,8 @@ sudo apt install openjdk-21-jre -y
 sudo apt install python3.12-full -y
 sudo apt install python3-pip -y
 sudo apt install python-is-python3 -y
+sudo apt install python3-full -y 
+
 
 # pip packages
 sudo pip3 install flask
