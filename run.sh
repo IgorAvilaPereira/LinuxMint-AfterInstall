@@ -139,6 +139,7 @@ sudo apt install python3.12-full -y
 sudo apt install python3-pip -y
 sudo apt install python-is-python3 -y
 sudo apt install python3-full -y 
+sudo apt install python3-flask -y 
 
 
 # pip packages
