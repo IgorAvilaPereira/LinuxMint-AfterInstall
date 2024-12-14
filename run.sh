@@ -24,6 +24,7 @@ mkdir "$DOWNLOAD_FOLDER"
 
 # url's deb's program
 URL_IRIUNWEBCAM="https://iriun.gitlab.io/iriunwebcam-2.8.1.deb"
+URL_GBPCEFWR64="https://cloud.gastecnologia.com.br/cef/warsaw/install/GBPCEFwr64.deb"
 
 URL_INSOMNIA="https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website"
 NAME_INSOMNIA="${DOWNLOAD_FOLDER}/insomnia.deb"
@@ -70,6 +71,7 @@ URL_BALENA="https://github.com/balena-io/etcher/releases/download/v1.19.25/balen
 # download deb's program
 #wget -c "$URL_CODIUM"                       -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_MINI_VIDEO_ME"                 -P "$DOWNLOAD_FOLDER"
+wget -c "$URL_GBPCEFWR64"                    -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_BALENA"                        -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DRAWIO"                        -P "$DOWNLOAD_FOLDER"
 wget -c "$URL_DBEAVER"                       -P "$DOWNLOAD_FOLDER" 
@@ -131,8 +133,9 @@ sudo apt install ffmpeg -y
 sudo apt install gstreamer1.0-plugins-ugly -y
 
 #  java
+sudo apt install openjdk-18-jdk -y
 sudo apt install openjdk-21-jdk -y
-sudo apt install openjdk-21-jre -y
+# sudo apt install openjdk-21-jre -y
 
 # python
 sudo apt install python3.12-full -y
@@ -250,8 +253,8 @@ sudo apt install speedtest-cli  -y
 sudo apt install btop  -y
 sudo apt install feh -y
 sudo apt install httpie -y 
-sudo apt install syncthing -y 
-sudo apt install syncthing-gtk -y 
+# sudo apt install syncthing -y 
+# sudo apt install syncthing-gtk -y 
 sudo apt install unrar -y 
 
 # ssh
