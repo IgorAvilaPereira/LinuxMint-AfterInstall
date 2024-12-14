@@ -13,5 +13,8 @@ sudo chmod 777 run.sh
 ./run.sh
 ```
 
-obs: se desejar instalar o driver do adaptador usb to hdmi, será preciso ir até https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu e realizar os passos.
+obs: 
+* se desejar instalar o driver do adaptador usb to hdmi, será preciso ir até https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu e realizar os passos.
+* Se quiser o indicator de caps lock do xfce: https://github.com/oco2000/xfce4-kbdleds-plugin
+
 
