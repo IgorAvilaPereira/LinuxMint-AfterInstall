@@ -331,6 +331,12 @@ sudo apt install pgadmin4 -y
 # sudo apt install pgadmin4-web -y
 sudo /usr/pgadmin4/bin/setup-web.sh
 
+# Spotify
+sudo curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt update  
+sudo apt install spotify-client -y
+
 # ruby gems dependencies
 #sudo apt install libpq-dev -y
 #sudo gem install pg
@@ -372,4 +378,4 @@ sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
 sudo apt update 
 sudo apt install snapd -y
 # spotify snap version
-sudo snap install spotify
+# sudo snap install spotify
