@@ -326,10 +326,10 @@ sudo apt autoremove -y
 # PostgreSQL e pgAdmin4
 sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
 sudo sh -c '. /etc/upstream-release/lsb-release && echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/noble pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
-# sudo apt install pgadmin4 -y
-sudo apt install pgadmin4-desktop -y
+sudo apt install pgadmin4 -y
+# sudo apt install pgadmin4-desktop -y
 # sudo apt install pgadmin4-web -y
-# sudo /usr/pgadmin4/bin/setup-web.sh
+sudo /usr/pgadmin4/bin/setup-web.sh
 
 # ruby gems dependencies
 #sudo apt install libpq-dev -y
@@ -373,10 +373,3 @@ sudo apt update
 sudo apt install snapd -y
 # spotify snap version
 sudo snap install spotify
-
-sudo apt update 
-sudo apt list --upgradable
-sudo apt dist-upgrade -y
-sudo flatpak update
-sudo apt autoclean
-sudo apt autoremove -y
