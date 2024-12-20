@@ -350,25 +350,25 @@ sudo apt install spotify-client -y
 # Flatpaks
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenNG
 sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
 sudo flatpak install -y --noninteractive flathub com.uploadedlobster.peek
 sudo flatpak install -y --noninteractive flathub org.kde.kdenlive
 sudo flatpak install -y --noninteractive flathub io.github.flattool.Warehouse
 sudo flatpak install -y --noninteractive flathub org.kde.kolourpaint
-sudo flatpak install -y --noninteractive flathub org.localsend.localsend_app
 sudo flatpak install -y --noninteractive flathub io.github.adrienverge.PhotoCollage
 sudo flatpak install -y --noninteractive flathub it.mijorus.gearlever
 sudo flatpak install -y --noninteractive flathub org.gnome.gitlab.YaLTeR.VideoTrimmer
-sudo flatpak install -y --noninteractive flathub org.localsend.localsend_app
 sudo flatpak install -y --noninteractive flathub com.rtosta.zapzap
 sudo flatpak install -y --noninteractive flathub com.dec05eba.gpu_screen_recorder
 sudo flatpak install -y --noninteractive flathub org.gnome.gitlab.somas.Apostrophe
 sudo flatpak install -y --noninteractive flathub org.gaphor.Gaphor
 sudo flatpak install -y --noninteractive flathub me.iepure.devtoolbox
 sudo flatpak install -y --noninteractive flathub com.adrienplazas.Metronome
-# sudo flatpak install -y --noninteractive flathub io.github.cleomenezesjr.Escambo
 sudo flatpak install -y --noninteractive flathub io.gitlab.gregorni.Letterpress
+# sudo flatpak install -y --noninteractive flathub org.localsend.localsend_app
+# sudo flatpak install -y --noninteractive flathub io.github.cleomenezesjr.Escambo
 # sudo flatpak install -y --noninteractive flathub io.gitlab.news_flash.NewsFlash
 # sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
 
