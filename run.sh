@@ -367,9 +367,9 @@ sudo flatpak install -y --noninteractive flathub org.gnome.gitlab.somas.Apostrop
 sudo flatpak install -y --noninteractive flathub org.gaphor.Gaphor
 sudo flatpak install -y --noninteractive flathub me.iepure.devtoolbox
 sudo flatpak install -y --noninteractive flathub com.adrienplazas.Metronome
-sudo flatpak install -y --noninteractive flathub io.github.cleomenezesjr.Escambo
-sudo flatpak install -y --noninteractive flathub io.gitlab.news_flash.NewsFlash
-
+# sudo flatpak install -y --noninteractive flathub io.github.cleomenezesjr.Escambo
+sudo flatpak install -y --noninteractive flathub io.gitlab.gregorni.Letterpress
+# sudo flatpak install -y --noninteractive flathub io.gitlab.news_flash.NewsFlash
 # sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
 
 sudo apt update 
