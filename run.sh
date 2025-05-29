@@ -326,6 +326,7 @@ sudo apt autoclean
 sudo apt autoremove -y
 
 # PostgreSQL e pgAdmin4
+sudo apt install postgresql-16 -y
 sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
 sudo sh -c '. /etc/upstream-release/lsb-release && echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/noble pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 sudo apt install pgadmin4 -y
