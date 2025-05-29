@@ -51,7 +51,7 @@ URL_JDK="https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb"
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 NAME_DISCORD="${DOWNLOAD_FOLDER}/discord.deb"
 
-URL_NETBEANS="https://dlcdn.apache.org/netbeans/netbeans-installers/23/apache-netbeans_23-1_all.deb"
+URL_NETBEANS="https://github.com/Friends-of-Apache-NetBeans/netbeans-installers/releases/download/v26-build1/apache-netbeans_26-1_amd64.deb"
 
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
 
