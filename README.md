@@ -46,4 +46,4 @@ Para executar o script, siga os passos abaixo:
    ./run.sh
    ```
    
-Durante a execução, o script pode solicitar sua senha de administrador para realizar certas operações.([github.com][2])
+Durante a execução, o script pode solicitar sua senha de administrador para realizar certas operações.
