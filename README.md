@@ -40,7 +40,7 @@ Para executar o script, siga os passos abaixo:
    sudo chmod +x run.sh
    ```
 
-3. Execute o script:([github.com][2])
+3. Execute o script:
 
    ```bash
    ./run.sh
