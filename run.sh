@@ -101,13 +101,6 @@ sudo apt install unzip -y
 unzip $NAME_GTILE_EXTENSION -d $EXTENSIONS_FOLDER
 unzip $NAME_MYLAUNCHER_APPLET -d $APPLETS_FOLDER
 
-# echo 'ImportMacAdress=python3 /home/iapereira/git/scripts-coordenacao/mac_selenium.py
-# GenerateEvaluationSheetToStudents=python3 /home/iapereira/git/GenerateEvaluationSheetToStudents/app.py 
-# PDF Annots=python3 /home/iapereira/git/pdfannots-tkinter-app/main.py
-# Youtube Downloader=python3 /home/iapereira/git/youtube-download/main.py
-# Latex From Figures=java -jar /home/iapereira/git/LatexPresentationFromFigures/dist/LatexPresentationFromFigures.jar
-# Distribuição da Carga Horária=firefox  /home/iapereira/git/DistribuicaoDeDisciplinas/carga_horaria.html' >> "${APPLETS_FOLDER}mylauncher@markbokil.com/mylauncher.properties"
-
 # other desktop enviroment (for poor pc)
 # sudo apt install xfce4 -y
 # extract here in thunar
@@ -134,7 +127,6 @@ sudo apt install python3-pip -y
 sudo apt install python-is-python3 -y
 sudo apt install python3-full -y 
 sudo apt install python3-flask -y 
-
 
 # pip packages
 sudo pip3 install flask
