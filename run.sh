@@ -11,6 +11,16 @@ sudo apt dist-upgrade -y
 sudo apt autoclean
 sudo apt autoremove -y
 
+# Flatpaks
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# apt's programs (installed from ubuntu/mint repositories)
+sudo apt install curl -y
+
+# linuxtoys
+curl -fsSL https://raw.githubusercontent.com/psygreg/linuxtoys/main/src/linuxtoys.sh | bash
+
 # destkops enviroments
 sudo apt install mint-meta-xfce -y
 # sudo apt install mint-meta-mate -y
@@ -25,46 +35,29 @@ mkdir "$DOWNLOAD_FOLDER"
 # url's deb's program
 URL_IRIUNWEBCAM="https://iriun.gitlab.io/iriunwebcam-2.8.1.deb"
 URL_GBPCEFWR64="https://cloud.gastecnologia.com.br/cef/warsaw/install/GBPCEFwr64.deb"
-
 URL_INSOMNIA="https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website"
 NAME_INSOMNIA="${DOWNLOAD_FOLDER}/insomnia.deb"
-
 URL_POSTMAN="https://dl.pstmn.io/download/latest/linux_64"
 NAME_POSTMAN="${DOWNLOAD_FOLDER}/postman-linux-x64.tar.gz"
-
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-
 URL_INSYNC="https://cdn.insynchq.com/builds/linux/insync_3.8.5.50499-jammy_amd64.deb"
 URL_INSYNC_NEMO="https://cdn.insynchq.com/builds/linux/insync-nemo_3.7.9.50368_all.deb"
 URL_INSYNC_ICONS="http://apt.insync.io/ubuntu/pool/contrib/i/insync-emblem-icons/insync-emblem-icons_3.4.2.40983_all.deb"
-
 URL_VSCODE="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 NAME_VSCODE="${DOWNLOAD_FOLDER}/vscode.deb"
-
 URL_MEGA="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb"
 URL_MEGA_NEMO="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbuntu_22.04_amd64.deb"
-
 URL_DRAWIO="https://github.com/jgraph/drawio-desktop/releases/download/v23.1.5/drawio-amd64-23.1.5.deb"
-
 URL_JDK="https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb"
-
 URL_DISCORD="https://discordapp.com/api/download?platform=linux&format=deb"
 NAME_DISCORD="${DOWNLOAD_FOLDER}/discord.deb"
-
 URL_NETBEANS="https://github.com/Friends-of-Apache-NetBeans/netbeans-installers/releases/download/v26-build1/apache-netbeans_26-1_amd64.deb"
-
 URL_CODIUM="https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_amd64.deb"
-
 URL_PDF_STUDIO_VIEWER="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
-
 URL_EMBY_SERVER="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.8.8.0/emby-server-deb_4.8.8.0_amd64.deb"
-
 URL_DBEAVER="https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
-
 URL_BEEKEPPER="https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v4.0.3/beekeeper-studio_4.0.3_amd64.deb"
-
 URL_SIMPLE_SIGNER="https://github.com/schorschii/Simple-Signer/releases/download/v1.5.0/simple-signer.deb"
-
 URL_MINI_VIDEO_ME="https://github.com/maykbrito/mini-video-me/releases/download/v4.0.2/mini-video-me_4.0.2_amd64.deb"
 URL_BALENA="https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher_1.19.25_amd64.deb"
 URL_YOUTUBEDOWNLOADER="https://www.mediahuman.com/pt-br/download/YouTubeDownloader.amd64.deb"
@@ -101,7 +94,6 @@ NAME_GTILE_EXTENSION="${DOWNLOAD_FOLDER}/gTile@shuairan.zip"
 URL_MYLAUNCHER_APPLET="https://cinnamon-spices.linuxmint.com/files/applets/mylauncher@markbokil.com.zip?time=1683739498"
 NAME_MYLAUNCHER_APPLET="${DOWNLOAD_FOLDER}/mylauncher@markbokil.com.zip"
 
-
 wget -cO $NAME_GTILE_EXTENSION "$URL_GTILE_EXTENSION"         -P "$DOWNLOAD_FOLDER"
 wget -cO $NAME_MYLAUNCHER_APPLET "$URL_MYLAUNCHER_APPLET"     -P "$DOWNLOAD_FOLDER"
 # extract gTile extension and My Launch applet
@@ -125,9 +117,6 @@ sudo apt install thunar-dropbox-plugin -y
 # power manager applet for xfce4
 sudo apt install xfce4-power-manager -y
 sudo apt install xfce4-pulseaudio-plugin -y
-
-# apt's programs (installed from ubuntu/mint repositories)
-sudo apt install curl -y
 
 # codecs
 sudo apt install mint-meta-codecs  -y
@@ -349,10 +338,6 @@ sudo apt install spotify-client -y
 # sudo apt-get install postgresql-server-dev-all  -y
 # sudo gem install dm-postgres-adapter
 # sudo gem install data_mapper
-
-# Flatpaks
-sudo apt install flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 sudo flatpak install -y --noninteractive flathub com.github.vkohaupt.vokoscreenNG
 sudo flatpak install -y --noninteractive flathub com.github.unrud.VideoDownloader
