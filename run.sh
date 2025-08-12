@@ -16,7 +16,12 @@ sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # apt's programs (installed from ubuntu/mint repositories)
+sudo apt install bash -y
 sudo apt install curl -y
+sudo apt install git -y 
+sudo apt install wget -y 
+sudo apt install zenity -y 
+sudo apt install jq -y
 
 # linuxtoys
 curl -fsSL https://raw.githubusercontent.com/psygreg/linuxtoys/main/src/linuxtoys.sh | bash
