@@ -24,7 +24,7 @@ sudo apt install zenity -y
 sudo apt install jq -y
 
 # linuxtoys
-curl -fsSL https://raw.githubusercontent.com/psygreg/linuxtoys/main/src/linuxtoys.sh | bash
+sudo curl -sSL https://raw.githubusercontent.com/psygreg/linuxtoys/master/install.sh | echo y | sh
 
 # destkops enviroments
 sudo apt install mint-meta-xfce -y
@@ -292,11 +292,12 @@ sudo apt autoclean
 sudo apt autoremove -y
 
 # brave
-sudo apt install curl  -y
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser  -y
+#sudo apt install curl  -y
+sudo curl -fsS https://dl.brave.com/install.sh | sh
+#sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+#echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+#sudo apt update
+#sudo apt install brave-browser  -y
 
 # maybe to try sudo apt install ./$DOWNLOAD_FOLDER/*.deb -y ??
 sudo dpkg -i $DOWNLOAD_FOLDER/*.deb
