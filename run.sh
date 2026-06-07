@@ -357,6 +357,7 @@ sudo flatpak install -y --noninteractive flathub org.localsend.localsend_app
 # sudo flatpak install -y --noninteractive flathub io.github.cleomenezesjr.Escambo
 # sudo flatpak install -y --noninteractive flathub io.gitlab.news_flash.NewsFlash
 # sudo flatpak install -y --noninteractive com.elsevier.MendeleyDesktop
+sudo flatpak install -y --noninteractive flathub io.gitlab.adhami3310.Footage
 
 sudo apt update 
 sudo apt list --upgradable
