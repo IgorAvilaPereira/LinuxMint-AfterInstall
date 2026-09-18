@@ -22,10 +22,10 @@ mkdir -p "$DOWNLOAD_DIR"
 log()  { echo -e "\n\033[1;34m▶ $*\033[0m"; }
 ok()   { echo -e "\033[0;32m  ✓ $*\033[0m"; }
 warn() { echo -e "\033[1;33m  ⚠ $*\033[0m"; }
+err()  { echo -e "\033[0;31m  ✗ $*\033[0m"; }
 
 # ── 1. Remover locks antigos com segurança ───────────────────
 log "Liberando locks do apt"
-# Só remove se o processo que criou o lock não existir mais
 if fuser /var/lib/dpkg/lock-frontend &>/dev/null; then
     warn "apt está em uso por outro processo — aguardando..."
     fuser -w /var/lib/dpkg/lock-frontend
@@ -47,7 +47,8 @@ log "Instalando pacotes base"
 apt-get install -y \
     bash curl wget git jq unzip \
     zenity software-properties-common apt-transport-https \
-    ca-certificates gnupg lsb-release
+    ca-certificates gnupg lsb-release \
+    ubuntu-drivers-common pciutils
 
 # ── 4. Flatpak ───────────────────────────────────────────────
 log "Configurando Flatpak"
@@ -65,14 +66,65 @@ apt-get install -y \
 
 # ── 6. Codecs e multimídia ───────────────────────────────────
 log "Instalando codecs e multimídia"
+# NOTA: "v4l2-ctl" NÃO é um pacote apt (é um binário dentro de v4l-utils).
+# Incluí-lo aqui derrubava o apt-get install inteiro e, com set -e, abortava
+# o script — antes mesmo de chegar na seção de drivers NVIDIA.
 apt-get install -y \
     mint-meta-codecs \
     ffmpeg \
     gstreamer1.0-plugins-ugly \
-    v4l-utils v4l2-ctl \
+    v4l-utils \
     mplayer vlc \
     audacious audacity cheese winff soundconverter \
     simplescreenrecorder mkvtoolnix
+ok "Codecs e multimídia instalados"
+
+# ── 6.1 Drivers de vídeo (NVIDIA via ubuntu-drivers) ─────────
+log "Detectando e instalando drivers de GPU"
+# ubuntu-drivers-common já foi instalado na seção 3.
+if command -v ubuntu-drivers &>/dev/null; then
+    if lspci | grep -qi '\bnvidia\b'; then
+        log "GPU NVIDIA detectada — drivers recomendados:"
+        ubuntu-drivers devices || true
+
+        # 'autoinstall' é o comando correto e estável em todas as versões
+        # do ubuntu-drivers-common (o antigo "install -y" não é sintaxe válida).
+        if ubuntu-drivers autoinstall; then
+            ok "Driver NVIDIA instalado via ubuntu-drivers autoinstall"
+        else
+            warn "autoinstall falhou — tentando instalar o driver recomendado manualmente"
+            RECOMMENDED=$(ubuntu-drivers devices 2>/dev/null \
+                | awk '/recommended/{print $3}' | head -n1)
+            if [[ -n "${RECOMMENDED:-}" ]]; then
+                apt-get install -y "$RECOMMENDED" \
+                    && ok "Instalado $RECOMMENDED" \
+                    || err "Falha ao instalar $RECOMMENDED — verifique manualmente"
+            else
+                err "Não foi possível determinar o driver recomendado — rode 'ubuntu-drivers devices' manualmente"
+            fi
+        fi
+    else
+        warn "Nenhuma GPU NVIDIA detectada — pulando instalação de driver dedicado"
+    fi
+else
+    err "ubuntu-drivers não encontrado mesmo após instalar ubuntu-drivers-common"
+fi
+
+# ── 6.2 v4l2loopback (webcam virtual) ─────────────────────────
+log "Configurando v4l2loopback"
+apt-get install -y v4l2loopback-dkms
+# NOTA: modprobe não aceita a flag "-y" — isso também derrubava o script.
+modprobe -r v4l2loopback 2>/dev/null || true
+if modprobe v4l2loopback exclusive_caps=1 card_label="Android Camera"; then
+    ok "v4l2loopback carregado"
+else
+    warn "Falha ao carregar v4l2loopback — pode exigir reboot (módulo dkms recém-compilado)"
+fi
+# Persistir a configuração entre reboots
+cat > /etc/modprobe.d/v4l2loopback.conf <<'EOF'
+options v4l2loopback exclusive_caps=1 card_label="Android Camera"
+EOF
+echo "v4l2loopback" > /etc/modules-load.d/v4l2loopback.conf
 
 # ── 7. Java ──────────────────────────────────────────────────
 log "Instalando Java"
@@ -86,19 +138,14 @@ apt-get install -y \
     python3-full python3-pip python-is-python3 \
     python3.12-full
 
-# pip via pipx (não usa sudo pip3 — quebra ambientes em Python ≥ 3.11)
 log "Instalando pipx e pacotes Python"
 apt-get install -y pipx
 sudo -u "$REAL_USER" pipx ensurepath
-sudo -u "$REAL_USER" pipx install flask
-sudo -u "$REAL_USER" pipx install flet
-sudo -u "$REAL_USER" pipx install gdown
-sudo -u "$REAL_USER" pipx install selenium
-sudo -u "$REAL_USER" pipx install pyinstaller
-sudo -u "$REAL_USER" pipx install pyautogui
-sudo -u "$REAL_USER" pipx install hyfetch
+for pkg in flask flet gdown selenium pyinstaller pyautogui hyfetch; do
+    sudo -u "$REAL_USER" pipx install "$pkg" \
+        && ok "pipx: $pkg" || warn "pipx: $pkg falhou — continuando"
+done
 
-# Pacotes globais de desenvolvimento (ainda aceitáveis via apt)
 apt-get install -y python3-flask python3-sqlalchemy
 
 # ── 9. PHP ───────────────────────────────────────────────────
@@ -155,16 +202,10 @@ apt-get install -y \
 # ── 18. PPAs com signed-by (método moderno) ──────────────────
 log "Adicionando PPAs"
 
-# indicator-sound-switcher
 add-apt-repository -y ppa:yktooo/ppa
-
-# texstudio
 add-apt-repository -y ppa:sunderme/texstudio
-
-# obs-studio
 add-apt-repository -y ppa:obsproject/obs-studio
 
-# vscode — signed-by moderno (apt-key está depreciado desde Ubuntu 22.04)
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc \
     | gpg --dearmor \
     | tee /usr/share/keyrings/microsoft.gpg > /dev/null
@@ -172,7 +213,6 @@ echo "deb [arch=$ARCH signed-by=/usr/share/keyrings/microsoft.gpg] \
 https://packages.microsoft.com/repos/vscode stable main" \
     > /etc/apt/sources.list.d/vscode.list
 
-# dbeaver
 add-apt-repository -y ppa:serge-rider/dbeaver-ce
 
 apt-get update -qq
@@ -205,7 +245,6 @@ ok "Extensões extraídas"
 # ── 20. Downloads de .deb externos ──────────────────────────
 log "Baixando .deb externos"
 
-# Mantém versões mais recentes via URL sem número fixo onde possível
 declare -A DEBS=(
     [google-chrome]="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
     [drawio]="https://github.com/jgraph/drawio-desktop/releases/download/v23.1.5/drawio-amd64-23.1.5.deb"
@@ -224,9 +263,9 @@ declare -A DEBS=(
     [jdk]="https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb"
     [pdf-studio]="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
     [emby]="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.8.8.0/emby-server-deb_4.8.8.0_amd64.deb"
+    [scrcpy-gui]="https://github.com/SimonAKing/scrcpy-gui/releases/download/v2.4.5/Scrcpy.GUI-2.4.5-linux-amd64.deb"
 )
 
-# URLs com nome de arquivo definido pelo usuário
 wget -qcO "$DOWNLOAD_DIR/discord.deb"  "https://discordapp.com/api/download?platform=linux&format=deb"
 wget -qcO "$DOWNLOAD_DIR/insomnia.deb" "https://updates.insomnia.rest/downloads/ubuntu/latest?app=com.insomnia.app&source=website"
 wget -qcO "$DOWNLOAD_DIR/postman.tar.gz" "https://dl.pstmn.io/download/latest/linux_64"
@@ -237,7 +276,7 @@ done
 
 # ── 21. Instalar todos os .deb baixados ──────────────────────
 log "Instalando .deb externos"
-dpkg -i "$DOWNLOAD_DIR"/*.deb || true   # dpkg pode falhar por deps; apt resolve abaixo
+dpkg -i "$DOWNLOAD_DIR"/*.deb || true
 apt-get install -f -y
 apt-get --fix-broken install -y
 ok ".deb instalados"
@@ -246,7 +285,6 @@ ok ".deb instalados"
 log "Instalando PostgreSQL 16 + pgAdmin4"
 apt-get install -y postgresql-16
 
-# pgAdmin4 — usa codename dinâmico
 curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub \
     | gpg --dearmor \
     | tee /usr/share/keyrings/pgadmin.gpg > /dev/null
@@ -325,9 +363,11 @@ apt-get dist-upgrade -y
 flatpak update -y
 apt-get autoclean -y
 apt-get autoremove -y
-# reinicia nemo para aplicar insync (opcional)
 sudo -u "$REAL_USER" nemo -q 2>/dev/null || true
 
 echo -e "\n\033[1;32m══════════════════════════════════════"
 echo    "  Setup concluído com sucesso! 🎉"
+if lspci | grep -qi '\bnvidia\b'; then
+    echo "  ⚠ Reinicie o sistema para carregar o driver NVIDIA."
+fi
 echo -e "══════════════════════════════════════\033[0m\n"
