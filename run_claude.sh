@@ -261,8 +261,7 @@ declare -A DEBS=(
     [mega-nemo]="https://mega.nz/linux/repo/xUbuntu_22.04/amd64/nemo-megasync-xUbuntu_22.04_amd64.deb"
     [netbeans]="https://github.com/Friends-of-Apache-NetBeans/netbeans-installers/releases/download/v27-build1/apache-netbeans_27-1_amd64.deb"
     [jdk]="https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb"
-    [pdf-studio]="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"
-    [emby]="https://github.com/MediaBrowser/Emby.Releases/releases/download/4.8.8.0/emby-server-deb_4.8.8.0_amd64.deb"
+    [pdf-studio]="https://download.qoppa.com/pdfstudioviewer/PDFStudioViewer_linux64.deb"   
     [scrcpy-gui]="https://github.com/SimonAKing/scrcpy-gui/releases/download/v2.4.5/Scrcpy.GUI-2.4.5-linux-amd64.deb"
 )
 
@@ -313,6 +312,10 @@ ok "Spotify OK"
 log "Instalando Brave"
 curl -fsS https://dl.brave.com/install.sh | sh
 ok "Brave OK"
+
+log "Instalando Jellyfin"
+curl -fsS https://repo.jellyfin.org/install-debuntu.sh | sudo bash
+ok "Jellyfin OK"
 
 # ── 25. Flatpak apps ─────────────────────────────────────────
 log "Instalando apps Flatpak"
